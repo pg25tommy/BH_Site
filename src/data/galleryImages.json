@@ -1,0 +1,60 @@
+{
+  "images": [
+    {
+      "id": "1",
+      "src": "/images/gallery/burger-1.jpg",
+      "alt": "The Works Burger - fully loaded",
+      "caption": "The Works Burger",
+      "category": "burgers"
+    },
+    {
+      "id": "2",
+      "src": "/images/gallery/burger-2.jpg",
+      "alt": "Mile High Burger Challenge",
+      "caption": "Ernie's Mile High Challenge",
+      "category": "burgers"
+    },
+    {
+      "id": "3",
+      "src": "/images/gallery/burger-3.jpg",
+      "alt": "Perogy Burger with sour cream",
+      "caption": "Our Famous Perogy Burger",
+      "category": "burgers"
+    },
+    {
+      "id": "4",
+      "src": "/images/gallery/restaurant-1.jpg",
+      "alt": "Burger Heaven New Westminster location interior",
+      "caption": "Our New Westminster Location",
+      "category": "restaurant"
+    },
+    {
+      "id": "5",
+      "src": "/images/gallery/restaurant-2.jpg",
+      "alt": "Burger Heaven Grande Prairie location",
+      "caption": "Grande Prairie Location",
+      "category": "restaurant"
+    },
+    {
+      "id": "6",
+      "src": "/images/gallery/appetizers-1.jpg",
+      "alt": "Loaded poutine with cheese curds",
+      "caption": "Classic Canadian Poutine",
+      "category": "appetizers"
+    },
+    {
+      "id": "7",
+      "src": "/images/gallery/wings-1.jpg",
+      "alt": "Chicken wings with various sauces",
+      "caption": "Wings with Choice of Sauce",
+      "category": "appetizers"
+    },
+    {
+      "id": "8",
+      "src": "/images/gallery/milkshake-1.jpg",
+      "alt": "Chocolate milkshake",
+      "caption": "Thick & Creamy Milkshakes",
+      "category": "beverages"
+    }
+  ]
+}

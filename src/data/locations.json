@@ -1,0 +1,22 @@
+{
+  "locations": [
+    {
+      "id": "new-westminster",
+      "name": "New Westminster",
+      "address": "77 10th St",
+      "city": "New Westminster",
+      "province": "BC",
+      "postalCode": "V3M 3X4",
+      "phone": "604.522.8339",
+      "hours": {
+        "weekday": "Sunday - Thursday: 11:00 AM - 9:00 PM",
+        "weekend": "Friday - Saturday: 11:00 AM - 10:00 PM"
+      },
+      "skipTheDishes": "https://www.skipthedishes.com/burger-heaven-new-westminster",
+      "coordinates": {
+        "lat": 49.2057,
+        "lng": -122.9110
+      }
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+{
+  "categories": [
+    {
+      "id": "appetizers",
+      "name": "Angelic Appetizers",
+      "description": "Start your meal right",
+      "items": [
+        {
+          "id": "chicken-fingers",
+          "name": "Chicken Fingers",
+          "description": "1/2 pound of wedges or salad - Breaded chicken tenders, fried to golden perfection (your choice of dip).",
+          "price": 18.09
+        },
+        {
+          "id": "chicken-wings",
+          "name": "Chicken Wings",
+          "description": "1 pound tossed in your choice of Hot, BBQ, Teriyaki, Sweet Thai Chili, Mango Habanero Sauce, or salt and pepper, served with carrot sticks. Your choice of dip.",
+          "price": 20.69
+        },
+        {
+          "id": "onion-rings",
+          "name": "Onion Rings",
+          "description": "Does rings around your appetite (your choice of dip).",
+          "price": 13.99
+        },
+        {
+          "id": "nacho-poutine",
+          "name": "Nacho Poutine",
+          "description": "1/2 pound of our wedges topped with ground beef, olives, jalapenos, shredded cheddar and mozza, and a dollop of salsa and sour cream n' chives.",
+          "price": 16.89
+        },
+        {
+          "id": "poutine",
+          "name": "Poutine",
+          "description": "1/2 pound of our wedges smothered with cheese curds and gravy.",
+          "price": 13.99
+        },
+        {
+          "id": "loaded-wedges",
+          "name": "Loaded Potato Wedges",
+          "description": "1/2 pound of wedges smothered with cheese & topped with real bacon bits and sour cream n' chives.",
+          "price": 14.49
+        },
+        {
+          "id": "magic-mushrooms",
+          "name": "Magic Mushrooms (not the real thing!)",
+          "description": "Lightly coated with our special breading (your choice of dip).",
+          "price": 13.99
+        },
+        {
+          "id": "yam-wedges",
+          "name": "Yam Wedges",
+          "description": "1/2 pound of crisp french fried wedges.",
+          "price": 7.89
+        }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "name": "Galaxy of Special Sandwiches",
+      "description": "Not in the mood for a burger? Try our signature sandwiches",
+      "items": [
+        {
+          "id": "wankers-club",
+          "name": "Toasted Wanker's Club",
+          "description": "Egg, cheddar, bacon, lettuce, tomato and our special sauce. Jimmy's own favorite!!",
+          "price": 20.09
+        },
+        {
+          "id": "heavenly-club",
+          "name": "Toasted Heavenly Club",
+          "description": "Cheddar, ham, bacon, tomato, lettuce our special sauce. It's a bite of heaven!!",
+          "price": 21.09
+        },
+        {
+          "id": "chicken-club",
+          "name": "Toasted Chicken Club",
+          "description": "Chicken, tomato, lettuce, bacon and our special sauce.",
+          "price": 23.29
+        },
+        {
+          "id": "grilled-cheddar-cheese",
+          "name": "Our Great Grilled Cheddar Cheese",
+          "description": "On thick sliced sourdough bread with natural aged Canadian cheddar – so nippy it bites back! Add bacon or ham $1.47 · Add tomato $0.99",
+          "price": 11.29
+        },
+        {
+          "id": "beef-dip",
+          "name": "The Classic Beef Dip",
+          "description": "Oven roasted striploin served on a baguette with horseradish mayo and a side of house made au jus. Make it a Philly Cheesesteak $2.49",
+          "price": 22.49
+        },
+        {
+          "id": "blt",
+          "name": "Toasted B.L.T.",
+          "description": "Crisp bacon, crunchy lettuce and slices of ripe tomato. A combination of compliments that wins compliments. Add cheddar: $1.47",
+          "price": 15.09
+        },
+        {
+          "id": "fish-chips",
+          "name": "Fish 'n' Chips",
+          "description": "Extra piece of Cod $5.84",
+          "price": 22.89
+        }
+      ]
+    },
+    {
+      "id": "create-your-own",
+      "name": "Create Your Own Favourite",
+      "description": "Start with a premium patty and build your dream burger with our toppings",
+      "items": [
+        {
+          "id": "beef-burger",
+          "name": "Heaven Sent Beef Burger",
+          "description": "With lettuce, tomato, red onions and our burger sauce. Add an extra patty for $4.49",
+          "price": 18.09
+        },
+        {
+          "id": "grilled-chicken-burger",
+          "name": "Heaven Sent Grilled Chicken Burger",
+          "description": "With lettuce, tomato and our burger sauce. Add an extra chicken breast $5.59",
+          "price": 20.79
+        },
+        {
+          "id": "meatless-burger",
+          "name": "Heaven Sent Meatless Burger",
+          "description": "With lettuce, tomato, red onions and our burger sauce. Add an extra patty for $4.69",
+          "price": 18.49
+        },
+        {
+          "id": "cod-burger",
+          "name": "Heaven Sent Cod Burger",
+          "description": "With lettuce, tomato, red onions and our house made tartar sauce, beer battered, grilled or cajun. Choose your bun: Sesame or Multigrain · Gluten free .80. Add your choice of sauce: Teriyaki, BBQ, Cajun, Habanero Mango, Crunchy Peanut Butter (n/c)",
+          "price": 20.89
+        }
+      ]
+    },
+    {
+      "id": "kids-seniors",
+      "name": "Lil Angels (Under 12) & Seniors (65+)",
+      "description": "Served with a small pop, milk, juice or coffee, potato wedges or salad and a small sundae.",
+      "items": [
+        {
+          "id": "kids-grilled-cheese",
+          "name": "Grilled Cheese Sandwich",
+          "description": "Served with a small pop, milk, juice or coffee, potato wedges or salad and a small sundae.",
+          "price": 15.49
+        },
+        {
+          "id": "kids-cheese-burger",
+          "name": "Child's Cheese Burger",
+          "description": "Served with a small pop, milk, juice or coffee, potato wedges or salad and a small sundae.",
+          "price": 15.49
+        },
+        {
+          "id": "kids-chicken-fingers",
+          "name": "Chicken Fingers",
+          "description": "Served with a small pop, milk, juice or coffee, potato wedges or salad and a small sundae.",
+          "price": 15.49
+        },
+        {
+          "id": "kids-fish-chips",
+          "name": "Fish 'n' Chips",
+          "description": "Served with a small pop, milk, juice or coffee, potato wedges or salad and a small sundae.",
+          "price": 15.49
+        }
+      ]
+    },
+    {
+      "id": "top-10",
+      "name": "Your Top 10!",
+      "description": "All our burgers are served with your choice of wedges or mixed greens. Substitute Caesar Salad, Onion Rings, Poutine or loaded wedges $3.09 · Substitute Yam wedges $2.99 · Hot gravy for your wedges $1.50",
+      "items": [
+        {
+          "id": "works-burger",
+          "name": "1. \"The Works\" Burger",
+          "description": "Cheddar, Mozzarella, Bacon & Mushrooms with Dill Pickles. A Heavenly Meal at a heck of a deal.",
+          "price": 25.89,
+          "featured": true
+        },
+        {
+          "id": "perogy-burger",
+          "name": "2. Perogy Beef Burger",
+          "description": "4 mini cheese and potato perogies, sautéed onion and shredded mozza and cheddar cheese topped with a dollop of sour cream n' chives",
+          "price": 25.69,
+          "featured": true
+        },
+        {
+          "id": "bbq-cheddar-bacon",
+          "name": "3. BBQ, Cheddar, Bacon & Mushroom Burger",
+          "description": "Democratically elected for its classic simplicity",
+          "price": 24.49
+        },
+        {
+          "id": "teriyaki-mozz-bacon",
+          "name": "4. Teriyaki, Mozzarella, Bacon & Mushroom Burger",
+          "description": "Miss Piggy's favorite",
+          "price": 24.49
+        },
+        {
+          "id": "swiss-mozz-pickle",
+          "name": "5. Swiss, Mozzarella & Pickle Burger",
+          "description": "A cheese lover's dream, with a zing",
+          "price": 23.19
+        },
+        {
+          "id": "thai-beef",
+          "name": "6. Thai Beef Burger",
+          "description": "Crunchy peanut butter, bacon, green onion and sweet thai chilli sauce",
+          "price": 22.89
+        },
+        {
+          "id": "breaded-chicken",
+          "name": "7. Breaded Chicken, Bacon, Cheddar & Mozzarella Burger",
+          "description": "Perfection",
+          "price": 27.19
+        },
+        {
+          "id": "teriyaki-chicken",
+          "name": "8. Teriyaki Grilled Chicken, Swiss & Bacon Burger",
+          "description": "It will make you yodel!!",
+          "price": 27.99
+        },
+        {
+          "id": "mexican-meatless",
+          "name": "9. Mexican Meatless Garden Burger",
+          "description": "With Salsa, Guacamole & Jalapenos",
+          "price": 24.59
+        },
+        {
+          "id": "breakfast-burger",
+          "name": "10. Breakfast Burger, Mozzarella, Fried Egg & Bacon",
+          "description": "Gooood Morningnn!!",
+          "price": 25.09
+        }
+      ]
+    },
+    {
+      "id": "specialty",
+      "name": "To Die For Specialty Burgers",
+      "description": "Premium creations for the adventurous",
+      "items": [
+        {
+          "id": "mile-high",
+          "name": "Ernie's Mile High",
+          "description": "Three pounds of meat. Eight patties high topped with THE WORKS!",
+          "price": 72.69,
+          "featured": true
+        },
+        {
+          "id": "awesome",
+          "name": "Awesome! Awesome! Awesome!",
+          "description": "A pound in a half of meat topped off with THE WORKS.",
+          "price": 45.49,
+          "featured": true
+        },
+        {
+          "id": "hulk-burger",
+          "name": "Hulk Burger",
+          "description": "This Two patty burger comes with THE WORKS!",
+          "price": 31.09,
+          "featured": true
+        },
+        {
+          "id": "greek-god",
+          "name": "Greek God Burger",
+          "description": "A fresh grade \"A\" lean beef patty topped with green peppers, black olives & feta cheese & tzatziki. Food for the God's indeed!",
+          "price": 24.89
+        },
+        {
+          "id": "insanity",
+          "name": "Insanity Burger",
+          "description": "Our beef burger topped with swiss and bacon between two grilled cheese sandwiches.",
+          "price": 29.99
+        },
+        {
+          "id": "chicken-marinara",
+          "name": "Chicken Marinara Burger",
+          "description": "A breaded chicken breast topped with marinara, parmesan and mozzarella.",
+          "price": 27.19
+        },
+        {
+          "id": "hawaiian",
+          "name": "Hawaiian Burger",
+          "description": "A teriyaki burger topped with ham, pineapple ring, lettuce, tomato, onions and mozzarella. Beats poi any day!",
+          "price": 25.89
+        },
+        {
+          "id": "chicken-cordon-bleu",
+          "name": "Chicken Cordon Bleu Burger",
+          "description": "A tender breast filet, breaded and fried to golden perfection, then topped with ham, melted mozzarella, tomato, lettuce and our special sauce.",
+          "price": 25.89
+        },
+        {
+          "id": "spicy-inferno",
+          "name": "The Spicy Inferno",
+          "description": "Our cajun beef patty topped with habanero mango sauce, jack cheese, jalapenos and banana peppers.",
+          "price": 27.19
+        },
+        {
+          "id": "greek-goddess-veggie",
+          "name": "Greek Goddess Veggie Burger",
+          "description": "Grilled veggie burger topped off with sundried tomatoes, feta, green peppers and hummus.",
+          "price": 25.29
+        }
+      ]
+    },
+    {
+      "id": "salads-soup",
+      "name": "Salads / Soup",
+      "description": "Fresh and healthy options",
+      "items": [
+        {
+          "id": "caesar-appy",
+          "name": "Caesar by Caesar (Appy Size)",
+          "description": "Served with garlic toast and a lemon wedge. Add Chicken: $5.59 · Add Cod: $5.89",
+          "price": 9.59
+        },
+        {
+          "id": "caesar-dinner",
+          "name": "Caesar by Caesar (Dinner Size)",
+          "description": "Served with garlic toast and a lemon wedge. Add Chicken: $5.59 · Add Cod: $5.89",
+          "price": 13.49
+        },
+        {
+          "id": "artisan-appy",
+          "name": "Artisan Salad (Appy Size)",
+          "description": "Our artisan salad with tomatoes, red onions, cabbage, carrots and feta. Served with garlic toast. Add Chicken: $5.59 · Add Cod: $5.89",
+          "price": 9.59
+        },
+        {
+          "id": "artisan-dinner",
+          "name": "Artisan Salad (Dinner Size)",
+          "description": "Our artisan salad with tomatoes, red onions, cabbage, carrots and feta. Served with garlic toast. Add Chicken: $5.59 · Add Cod: $5.89",
+          "price": 13.49
+        },
+        {
+          "id": "mediterranean",
+          "name": "Mediterranean Salad",
+          "description": "Our artisan salad with artichoke hearts, tomatoes, kalamata olives, feta cheese and toasted pine nuts. Served with your choice of dressing and garlic toast. Salad dressings: Strawberry Vinaigrette, Ranch, Sundried Tomato, 1000 Island, Blue Cheese, French, Italian, Honey Mustard. Add Chicken: $5.59 · Add Cod: $5.89",
+          "price": 13.49
+        },
+        {
+          "id": "soup-cup",
+          "name": "Soup (Cup)",
+          "description": "Ask your server for today's selection",
+          "price": 4.89
+        },
+        {
+          "id": "soup-bowl",
+          "name": "Soup (Bowl)",
+          "description": "Ask your server for today's selection",
+          "price": 7.59
+        }
+      ]
+    }
+  ],
+  "toppings": [
+    {
+      "id": "canadian-cheddar",
+      "name": "Canadian Cheddar Cheese",
+      "price": 1.89
+    },
+    {
+      "id": "mozzarella",
+      "name": "Mozzarella Cheese",
+      "price": 1.89
+    },
+    {
+      "id": "swiss",
+      "name": "Swiss Cheese",
+      "price": 2.09
+    },
+    {
+      "id": "jack",
+      "name": "Jack Cheese",
+      "price": 2.09
+    },
+    {
+      "id": "feta",
+      "name": "Feta Cheese",
+      "price": 2.09
+    },
+    {
+      "id": "blue-cheese",
+      "name": "Blue Cheese",
+      "price": 2.09
+    },
+    {
+      "id": "canadian-bacon",
+      "name": "Canadian Bacon",
+      "price": 1.89
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "price": 1.89
+    },
+    {
+      "id": "ham",
+      "name": "Ham",
+      "price": 1.89
+    },
+    {
+      "id": "guacamole",
+      "name": "Guacamole",
+      "price": 1.89
+    },
+    {
+      "id": "salsa",
+      "name": "Salsa",
+      "price": 1.89
+    },
+    {
+      "id": "jalapenos",
+      "name": "Jalapenos",
+      "price": 1.89
+    },
+    {
+      "id": "caramelized-onions",
+      "name": "Caramelized Onions",
+      "price": 2.09
+    },
+    {
+      "id": "fried-egg",
+      "name": "Fried Egg",
+      "price": 1.89
+    },
+    {
+      "id": "tzatziki",
+      "name": "Tzatziki",
+      "price": 1.89
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple",
+      "price": 1.89
+    },
+    {
+      "id": "black-olives",
+      "name": "Black Olives",
+      "price": 1.89
+    },
+    {
+      "id": "dill-pickle",
+      "name": "Dill Pickle",
+      "price": 1.89
+    },
+    {
+      "id": "green-peppers",
+      "name": "Green Peppers",
+      "price": 1.89
+    },
+    {
+      "id": "banana-peppers",
+      "name": "Banana Peppers",
+      "price": 1.89
+    },
+    {
+      "id": "sundried-tomatoes",
+      "name": "Sundried Tomatoes",
+      "price": 2.09
+    },
+    {
+      "id": "hummus",
+      "name": "Hummus",
+      "price": 1.89
+    },
+    {
+      "id": "mini-perogies",
+      "name": "Mini Perogies",
+      "price": 2.39
+    }
+  ]
+}
