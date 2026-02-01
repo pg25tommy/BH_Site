@@ -1,8 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Burger Heaven
+
+A modern, responsive website for Burger Heaven restaurant located in New Westminster, BC.
+
+## About
+
+Burger Heaven is a local burger restaurant serving New Westminster with premium burgers, signature creations, and the famous Mile High Challenge. This website showcases the menu, location information, gallery, and provides online ordering integration with Skip the Dishes.
+
+## Features
+
+- **Responsive Design**: Fully responsive layout optimized for mobile, tablet, and desktop
+- **Wood-Panel Theme**: Custom retro diner aesthetic with warm wood tones and vibrant accents
+- **Daily Featured Items**: Rotating featured menu items that change daily
+- **Online Ordering**: Direct integration with Skip the Dishes for easy online ordering
+- **Interactive Menu**: Browse the full menu with detailed descriptions and pricing
+- **Gallery**: Photo gallery showcasing food and restaurant atmosphere
+- **Mile High Challenge**: Dedicated page for the famous Mile High burger challenge
+- **Location Information**: Complete address, hours, and contact details
+
+## Pages
+
+- **Home** (`/`): Hero section, featured items, Mile High Challenge preview, and location info
+- **Menu** (`/menu`): Full menu with categories including burgers, sides, drinks, and desserts
+- **Gallery** (`/gallery`): Photo gallery of food and restaurant
+- **Mile High Club** (`/mile-high-club`): Hall of fame for Mile High Challenge winners
+- **Locations** (`/locations`): Detailed location information and hours
+- **About** (`/about`): Restaurant history and story
+- **Careers** (`/careers`): Employment opportunities
+- **Contact** (`/contact`): Contact form and frequently asked questions
+
+## Restaurant Information
+
+**New Westminster Location**
+- Address: 77 10th St, New Westminster, BC V3M 3X4
+- Phone: 604.522.8339
+- Hours:
+  - Sunday - Thursday: 11:00 AM - 9:00 PM
+  - Friday - Saturday: 11:00 AM - 10:00 PM
+
+## Technology Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Heroicons
+- **Deployment**: Vercel-ready
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +65,68 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+burger-heaven-site/
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   │   ├── about/
+│   │   ├── careers/
+│   │   ├── contact/
+│   │   ├── gallery/
+│   │   ├── locations/
+│   │   ├── menu/
+│   │   ├── mile-high-club/
+│   │   └── page.tsx      # Home page
+│   ├── components/       # React components
+│   │   ├── FeaturedItems.tsx
+│   │   ├── Footer.tsx
+│   │   ├── GalleryGrid.tsx
+│   │   ├── Header.tsx
+│   │   ├── MenuCategory.tsx
+│   │   └── MenuItem.tsx
+│   ├── data/            # JSON data files
+│   │   ├── galleryImages.json
+│   │   ├── locations.json
+│   │   └── menuData.json
+│   ├── types/           # TypeScript type definitions
+│   └── utils/           # Utility functions
+└── public/              # Static assets
+```
 
-## Learn More
+## Building for Production
 
-To learn more about Next.js, take a look at the following resources:
+Build the application:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Start the production server:
 
-## Deploy on Vercel
+```bash
+npm start
+# or
+yarn start
+# or
+pnpm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This Next.js application is optimized for deployment on Vercel. Connect your GitHub repository to Vercel for automatic deployments.
+
+Alternatively, you can deploy to any platform that supports Next.js applications.
+
+## License
+
+All rights reserved - Burger Heaven
