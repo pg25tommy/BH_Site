@@ -1,16 +1,40 @@
 import { Metadata } from 'next';
 import GalleryGrid from '@/components/GalleryGrid';
-import galleryData from '@/data/galleryImages.json';
 import { GalleryImage } from '@/types/menu';
-
-const images = galleryData.images as GalleryImage[];
+import fs from 'fs';
+import path from 'path';
 
 export const metadata: Metadata = {
   title: 'Gallery | Burger Heaven',
   description: 'Browse photos of our delicious burgers, appetizers, and restaurant locations.',
 };
 
+// Automatically get all images from the gallery folder
+function getGalleryImages(): GalleryImage[] {
+  const galleryDir = path.join(process.cwd(), 'public', 'images', 'gallery');
+
+  try {
+    const files = fs.readdirSync(galleryDir);
+    const imageFiles = files.filter(file =>
+      /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
+    );
+
+    return imageFiles.map((file, index) => ({
+      id: String(index + 1),
+      src: `/images/gallery/${file}`,
+      alt: file.replace(/\.(jpg|jpeg|png|gif|webp)$/i, '').replace(/[-_]/g, ' '),
+      caption: file.replace(/\.(jpg|jpeg|png|gif|webp)$/i, '').replace(/[-_]/g, ' '),
+      category: 'gallery'
+    }));
+  } catch (error) {
+    console.error('Error reading gallery directory:', error);
+    return [];
+  }
+}
+
 export default function GalleryPage() {
+  const images = getGalleryImages();
+
   return (
     <div className="bg-wood-100 min-h-screen">
       {/* Header Section */}
@@ -28,8 +52,37 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* Instagram Section */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+        <div className="text-center diner-card rounded-2xl p-8">
+          <h2 className="text-3xl md:text-4xl font-heading text-primary-700 mb-4">
+            FOLLOW US ON INSTAGRAM
+          </h2>
+          <p className="text-lg text-accent-800 mb-6">
+            Check out our latest posts <span className="font-bold text-primary-600">@burgerheavennewwest</span>
+          </p>
+          <a
+            href="https://www.instagram.com/burgerheavennewwest/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 text-white px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 text-lg"
+          >
+            Follow @burgerheavennewwest
+          </a>
+        </div>
+      </section>
+
       {/* Gallery Grid */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-heading text-accent-900 mb-4">
+            OUR GALLERY
+          </h2>
+          <p className="text-lg text-accent-700">
+            A collection of our delicious creations and restaurant atmosphere
+          </p>
+        </div>
+
         <GalleryGrid images={images} />
 
         <div className="mt-12 text-center diner-card rounded-2xl p-8 animate-fade-in-up">
@@ -37,26 +90,8 @@ export default function GalleryPage() {
             SHARE YOUR EXPERIENCE
           </h2>
           <p className="text-accent-800 mb-6">
-            Tag us on social media with <span className="font-bold text-primary-600">#BurgerHeaven</span> to be featured in our gallery!
+            Tag us <span className="font-bold text-primary-600">@burgerheavennewwest</span> or use <span className="font-bold text-primary-600">#BurgerHeaven</span> to be featured!
           </p>
-          <div className="flex justify-center gap-4 flex-wrap">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 shadow-md"
-            >
-              Follow on Instagram
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 shadow-md"
-            >
-              Like on Facebook
-            </a>
-          </div>
         </div>
       </div>
     </div>
