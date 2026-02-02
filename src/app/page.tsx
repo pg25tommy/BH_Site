@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import FeaturedItems from '@/components/FeaturedItems';
 import menuData from '@/data/menuData.json';
 import locationsData from '@/data/locations.json';
@@ -21,29 +22,45 @@ export default function Home() {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl"></div>
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-heading mb-6 tracking-wide text-primary-500 animate-fade-in-up" style={{ textShadow: '0 4px 20px rgba(234, 88, 12, 0.4)' }}>
-              WELCOME TO BURGER HEAVEN
-            </h1>
-            <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-wood-100 leading-relaxed font-light">
-              Experience the ultimate burger paradise with our signature creations,
-              crafted with premium ingredients and served with passion.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                href="/menu"
-                className="btn-primary group inline-block bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-600 text-white font-semibold py-4 px-10 rounded-full text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
-              >
-                <span className="relative z-10">View Our Menu</span>
-              </Link>
-              <a
-                href="https://www.skipthedishes.com/burger-heaven-new-westminster"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block glass-card text-accent-900 font-semibold py-4 px-10 rounded-full text-lg transition-all duration-300 hover:scale-105"
-              >
-                Order Online - Skip the Dishes
-              </a>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
+            {/* Image on Left */}
+            <div className="relative h-[450px] md:h-[550px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in-up group md:-ml-8">
+              <Image
+                src="/images/atmosphere/Outside_Hero.jpg"
+                alt="Burger Heaven Restaurant Exterior"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-accent-900/40 to-transparent"></div>
+            </div>
+
+            {/* Text on Right */}
+            <div className="text-center md:text-left">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading mb-6 tracking-wide text-primary-500 animate-fade-in-up" style={{ textShadow: '0 4px 20px rgba(234, 88, 12, 0.4)', animationDelay: '0.1s' }}>
+                WELCOME TO BURGER HEAVEN
+              </h1>
+              <p className="text-xl md:text-2xl mb-10 text-wood-100 leading-relaxed font-light animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                Experience the ultimate burger paradise with our signature creations,
+                crafted with premium ingredients and served with passion.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 md:justify-start justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                <Link
+                  href="/menu"
+                  className="btn-primary group inline-block bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-600 text-white font-semibold py-4 px-10 rounded-full text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+                >
+                  <span className="relative z-10">View Our Menu</span>
+                </Link>
+                <a
+                  href="https://www.skipthedishes.com/burger-heaven-new-westminster"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block glass-card text-accent-900 font-semibold py-4 px-10 rounded-full text-lg transition-all duration-300 hover:scale-105"
+                >
+                  Order Online - Skip the Dishes
+                </a>
+              </div>
             </div>
           </div>
         </div>
