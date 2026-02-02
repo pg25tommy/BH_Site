@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About Us | Burger Heaven',
@@ -24,47 +25,40 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Story Section with Bill Mural Image */}
       <section className="section-padding">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="diner-card rounded-2xl p-8 md:p-12 mb-12 animate-fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-heading text-primary-700 mb-6">
-              OUR STORY
+            <h2 className="text-3xl md:text-4xl font-heading text-primary-700 mb-8 text-center">
+              THE HISTORY OF HOW IT ALL STARTED
             </h2>
+
+            {/* Bill Mural Image */}
+            <div className="relative w-full h-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl mb-8">
+              <Image
+                src="/images/atmosphere/Bill_Hero.jpg"
+                alt="Bill Mural - Founder of Burger Heaven"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 896px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-accent-900/20 to-transparent"></div>
+            </div>
+
+            <p className="text-center text-lg font-semibold text-primary-700 mb-8">
+              Bill Mural - Founder of Burger Heaven
+            </p>
+
             <div className="prose prose-lg max-w-none text-accent-800 space-y-4 leading-relaxed">
               <p>
-                Burger Heaven was born from a simple dream: to create the perfect
-                burger experience. What started as a passion project has grown into
-                a beloved Western Canadian institution, serving hungry customers
-                across two locations.
+                My father "Bill Mural" came out from Montreal in September of 1985 to look at this Classy Burger Joint called Burger Haven at the time. The restaurant had been opened and run by a man named Gord Skillen, who now was looking at other ventures and wanted to move on. My father walked into the restaurant and within a half an hour had made his decision to purchase it, he said it was just the overall feeling he got when he walked through the door, and the greatest burger he had ever tasted. From that point he moved to New Westminster and starting working with Gord to take over the restaurant and make it his own, but still keeping the great base he had to work with. With his new menu developments which all had a base to work from he used to say, we can add whatever we want as long as it starts with a burger, and we hold that till this day and forever will. When I entered into the restaurant business end with my father we grew as a team and worked many long hours together and apart, till finally one day in 1993 he walked away to start yet another business venture. I consider the Burger Heaven to be my second home, it is where I am comfortable and at my best. Burgers are my life.
               </p>
               <p>
-                Our founders believed that a great burger isn&apos;t just about the
-                ingredients - it&apos;s about the experience. From the moment you
-                walk through our doors to that first satisfying bite, we want every
-                visit to Burger Heaven to be memorable.
+                I have always really enjoyed being a part of the Burger Heaven restaurant ever since I was 14 years old doing dishes for our customers. The atmosphere of the restaurant is very relaxed and a glad to be here feeling. Most long term customers have put something into this place whether it is suggestion on new menu items or a part of the actual structure. Two of our weekly customers gave us the cedar planking that lines our walls and to this day they still enjoy coming and reminiscing about how things are and used to be. I have grown up with our patrons and they enjoy hearing about the other things going on in my life as I do theirs. I have watched their children grow up and become our patrons as well. Many people love to make this place a first date outing as they are always greeted with a smile and a "welcome back". If you are looking for fast food this is not the place, everything in our kitchen is made with pride and freshness, we always have the attitude that if you are not proud of it you don&apos;t serve it. It&apos;s not cheap, but these days it is hard to find quality at a reasonable price, except here. With the tight spacing of the tables and the social atmosphere it is hard not to make new friends while you are dining, because your neighbor might only be inches away. I have dined at many restaurant over the years and have always compared them to the Burger Heaven and have found few which come with the entire package, Great food, Great value, Great atmosphere, and most of all professional, courteous, and friendly service, over all a glad I have been there feeling when you leave and look forward to the next time you return. This is my kind of place.
               </p>
               <p>
-                Today, we&apos;re proud to serve thousands of burger lovers every
-                week, each one getting the same attention to quality and flavor that
-                we&apos;ve been known for since day one.
+                We would like to thank Bill Mural, founder of Burger Heaven. We will strive to continue his commitment and dedication to quality, value and service.
               </p>
-            </div>
-          </div>
-
-          {/* Video Section */}
-          <div className="diner-card rounded-2xl p-8 md:p-12 mb-12 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <h2 className="text-3xl md:text-4xl font-heading text-primary-700 mb-6 text-center">
-              OUR STORY IN ACTION
-            </h2>
-            <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/138351283?title=0&byline=0&portrait=0"
-                className="absolute top-0 left-0 w-full h-full rounded-2xl border-0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                title="Burger Heaven Story Video"
-              ></iframe>
             </div>
           </div>
 

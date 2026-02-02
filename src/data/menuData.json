@@ -403,6 +403,342 @@
           "image": "/images/menu/salads/soup-bowl.jpg"
         }
       ]
+    },
+    {
+      "id": "milkshakes",
+      "name": "Milkshakes",
+      "description": "Your choice only $5.74",
+      "items": [
+        {
+          "id": "vanilla-shake",
+          "name": "Vanilla",
+          "description": "Classic vanilla milkshake",
+          "price": 5.74,
+          "image": "/images/menu/milkshakes/vanilla-shake.jpg"
+        },
+        {
+          "id": "chocolate-shake",
+          "name": "Chocolate",
+          "description": "Rich chocolate milkshake",
+          "price": 5.74,
+          "image": "/images/menu/milkshakes/chocolate-shake.jpg"
+        },
+        {
+          "id": "strawberry-shake",
+          "name": "Strawberry",
+          "description": "Sweet strawberry milkshake",
+          "price": 5.74,
+          "image": "/images/menu/milkshakes/strawberry-shake.jpg"
+        },
+        {
+          "id": "mint-chocolate-shake",
+          "name": "Mint Chocolate",
+          "description": "Refreshing mint chocolate milkshake",
+          "price": 5.74,
+          "image": "/images/menu/milkshakes/mint-chocolate-shake.jpg"
+        },
+        {
+          "id": "nutella-shake",
+          "name": "Nutella",
+          "description": "Creamy Nutella milkshake",
+          "price": 5.74,
+          "image": "/images/menu/milkshakes/nutella-shake.jpg"
+        },
+        {
+          "id": "peppermint-shake",
+          "name": "Peppermint",
+          "description": "Cool peppermint milkshake",
+          "price": 5.74,
+          "image": "/images/menu/milkshakes/peppermint-shake.jpg"
+        },
+        {
+          "id": "peanut-butter-shake",
+          "name": "Peanut Butter",
+          "description": "Rich peanut butter milkshake",
+          "price": 5.74,
+          "image": "/images/menu/milkshakes/peanut-butter-shake.jpg"
+        },
+        {
+          "id": "red-velvet-shake",
+          "name": "Red Velvet",
+          "description": "Decadent red velvet milkshake",
+          "price": 5.74,
+          "image": "/images/menu/milkshakes/red-velvet-shake.jpg"
+        },
+        {
+          "id": "apple-pie-shake",
+          "name": "Apple Pie",
+          "description": "Apple pie flavored milkshake",
+          "price": 5.74,
+          "image": "/images/menu/milkshakes/apple-pie-shake.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fancy-beverages",
+      "name": "Fancy Bottomless Beverages",
+      "description": "Your choice only $4.79",
+      "items": [
+        {
+          "id": "strawberry-lemonade",
+          "name": "Strawberry Lemonade",
+          "description": "Bottomless strawberry lemonade",
+          "price": 4.79,
+          "image": "/images/menu/beverages/strawberry-lemonade.jpg"
+        },
+        {
+          "id": "blue-raspberry-lemonade",
+          "name": "Blue Raspberry Lemonade",
+          "description": "Bottomless blue raspberry lemonade",
+          "price": 4.79,
+          "image": "/images/menu/beverages/blue-raspberry-lemonade.jpg"
+        },
+        {
+          "id": "shirley-temple",
+          "name": "Shirley Temple",
+          "description": "Bottomless Shirley Temple",
+          "price": 4.79,
+          "image": "/images/menu/beverages/shirley-temple.jpg"
+        },
+        {
+          "id": "roy-rogers",
+          "name": "Roy Rogers",
+          "description": "Bottomless Roy Rogers",
+          "price": 4.79,
+          "image": "/images/menu/beverages/roy-rogers.jpg"
+        }
+      ]
+    },
+    {
+      "id": "non-alcoholic",
+      "name": "Non-Alcoholic Beverages",
+      "description": "Refreshing drinks for everyone",
+      "items": [
+        {
+          "id": "coffee",
+          "name": "\"Bottomless\" Heavenly Coffee",
+          "description": "Unlimited refills with a meal. Leaded and Unleaded.",
+          "price": 3.24,
+          "image": "/images/menu/beverages/coffee.jpg"
+        },
+        {
+          "id": "juice",
+          "name": "Juice",
+          "description": "Apple, Cranberry and Orange",
+          "price": 3.79,
+          "image": "/images/menu/beverages/juice.jpg"
+        },
+        {
+          "id": "ice-cream-float",
+          "name": "Old Fashioned Ice Cream Float",
+          "description": "Soft drink choices",
+          "price": 5.74,
+          "image": "/images/menu/beverages/ice-cream-float.jpg"
+        },
+        {
+          "id": "soft-drinks",
+          "name": "\"Bottomless\" Soft Drinks",
+          "description": "Pepsi, 7-up, Rootbeer, Grape Crush, Ginger Ale, Diet Pepsi, Cream Soda, Ice Tea, Lemonade",
+          "price": 3.69,
+          "image": "/images/menu/beverages/soft-drinks.jpg"
+        },
+        {
+          "id": "tea",
+          "name": "Tea",
+          "description": "Hot tea",
+          "price": 3.24,
+          "image": "/images/menu/beverages/tea.jpg"
+        },
+        {
+          "id": "hot-chocolate",
+          "name": "Hot Chocolate",
+          "description": "Rich hot chocolate",
+          "price": 3.24,
+          "image": "/images/menu/beverages/hot-chocolate.jpg"
+        },
+        {
+          "id": "milk",
+          "name": "Milk",
+          "description": "Large (16oz. glass)",
+          "price": 3.79,
+          "image": "/images/menu/beverages/milk.jpg"
+        }
+      ]
+    },
+    {
+      "id": "beer-ciders",
+      "name": "Beer & Ciders",
+      "description": "Craft and classic selections",
+      "items": [
+        {
+          "id": "steel-oak-glass",
+          "name": "Steel 'n' Oak (20 oz. glass)",
+          "description": "Steel 'n' Oak on draft",
+          "price": 7.99,
+          "image": "/images/menu/beer-ciders/steel-oak-glass.jpg"
+        },
+        {
+          "id": "steel-oak-pitcher",
+          "name": "Steel 'n' Oak Pitcher (60 oz.)",
+          "description": "Steel 'n' Oak pitcher",
+          "price": 21.34,
+          "image": "/images/menu/beer-ciders/steel-oak-pitcher.jpg"
+        },
+        {
+          "id": "gimme-gamble",
+          "name": "Gimme a Gamble (355 ml.)",
+          "description": "A true gamble our choice of beer",
+          "price": 5.69,
+          "image": "/images/menu/beer-ciders/gimme-gamble.jpg"
+        },
+        {
+          "id": "domestic-bottles",
+          "name": "Domestic Bottles (341 ml.)",
+          "description": "Sleemans Honey Brown, Budweiser, Canadian, Coors Light, Kokanee, MGD",
+          "price": 6.39,
+          "image": "/images/menu/beer-ciders/domestic-bottles.jpg"
+        },
+        {
+          "id": "import-bottles",
+          "name": "Import Bottles (330 ml.)",
+          "description": "Heineken, Corona, Stella, Guiness",
+          "price": 6.99,
+          "image": "/images/menu/beer-ciders/import-bottles.jpg"
+        },
+        {
+          "id": "ciders",
+          "name": "Ciders (330 ml.)",
+          "description": "Apple, Peach, Pear or Smirnoff Ice",
+          "price": 6.99,
+          "image": "/images/menu/beer-ciders/ciders.jpg"
+        },
+        {
+          "id": "motts-caesar",
+          "name": "Mott's Caesar (355 ml.)",
+          "description": "Classic Caesar",
+          "price": 7.19,
+          "image": "/images/menu/beer-ciders/motts-caesar.jpg"
+        },
+        {
+          "id": "strongbow",
+          "name": "Strongbow (440 ml.)",
+          "description": "Strongbow cider",
+          "price": 7.29,
+          "image": "/images/menu/beer-ciders/strongbow.jpg"
+        }
+      ]
+    },
+    {
+      "id": "wine",
+      "name": "House Wines",
+      "description": "Red or White",
+      "items": [
+        {
+          "id": "wine-glass",
+          "name": "Glass (6 oz.)",
+          "description": "Red or White wine by the glass",
+          "price": 6.94,
+          "image": "/images/menu/wine/wine-glass.jpg"
+        },
+        {
+          "id": "wine-half-litre",
+          "name": "1/2 Litre",
+          "description": "Red or White wine half litre",
+          "price": 20.29,
+          "image": "/images/menu/wine/wine-half-litre.jpg"
+        },
+        {
+          "id": "wine-litre",
+          "name": "Litre",
+          "description": "Red or White wine litre",
+          "price": 26.54,
+          "image": "/images/menu/wine/wine-litre.jpg"
+        }
+      ]
+    },
+    {
+      "id": "heavenly-coffees",
+      "name": "Heavenly Coffees",
+      "description": "All Heavenly Coffees 1 oz. / Add an extra shot $3.00",
+      "items": [
+        {
+          "id": "hazelnut-coffee",
+          "name": "Hazelnut Coffee",
+          "description": "Frangelico & fresh brewed coffee",
+          "price": 6.74,
+          "image": "/images/menu/coffees/hazelnut-coffee.jpg"
+        },
+        {
+          "id": "boozy-mocha",
+          "name": "Boozy Mocha",
+          "description": "Kahlua, peppermint & hot chocolate",
+          "price": 6.74,
+          "image": "/images/menu/coffees/boozy-mocha.jpg"
+        },
+        {
+          "id": "monte-cristo",
+          "name": "Monte Cristo",
+          "description": "Grand Marnier, Kahlua & fresh brewed coffee",
+          "price": 6.74,
+          "image": "/images/menu/coffees/monte-cristo.jpg"
+        },
+        {
+          "id": "baileys-coffee",
+          "name": "Bailey's Coffee",
+          "description": "Irish Baileys Cream & fresh brewed coffee",
+          "price": 6.74,
+          "image": "/images/menu/coffees/baileys-coffee.jpg"
+        },
+        {
+          "id": "b52",
+          "name": "B52",
+          "description": "Baileys, Kahlua, Grand Marnier & fresh brewed coffee",
+          "price": 6.74,
+          "image": "/images/menu/coffees/b52.jpg"
+        },
+        {
+          "id": "polar-bear",
+          "name": "Polar Bear",
+          "description": "Baileys & Hot Chocolate",
+          "price": 6.74,
+          "image": "/images/menu/coffees/polar-bear.jpg"
+        }
+      ]
+    },
+    {
+      "id": "boozy-shakes",
+      "name": "Boozy Milkshakes",
+      "description": "Your choice only $8.74 / Add an extra shot for only $3.50",
+      "items": [
+        {
+          "id": "baileys-shake",
+          "name": "Baileys Milkshake",
+          "description": "Baileys milkshake - enjoy as a vanilla shake or create your own favourite",
+          "price": 8.74,
+          "image": "/images/menu/boozy-shakes/baileys-shake.jpg"
+        },
+        {
+          "id": "kahlua-shake",
+          "name": "Kahlua Milkshake",
+          "description": "Kahlua milkshake - enjoy as a vanilla shake or create your own favourite",
+          "price": 8.74,
+          "image": "/images/menu/boozy-shakes/kahlua-shake.jpg"
+        },
+        {
+          "id": "frangelico-shake",
+          "name": "Frangelico Milkshake",
+          "description": "Frangelico milkshake - enjoy as a vanilla shake or create your own favourite",
+          "price": 8.74,
+          "image": "/images/menu/boozy-shakes/frangelico-shake.jpg"
+        },
+        {
+          "id": "grand-marnier-shake",
+          "name": "Grand Marnier Milkshake",
+          "description": "Grand Marnier milkshake - enjoy as a vanilla shake or create your own favourite",
+          "price": 8.74,
+          "image": "/images/menu/boozy-shakes/grand-marnier-shake.jpg"
+        }
+      ]
     }
   ],
   "toppings": [
