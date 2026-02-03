@@ -6,8 +6,9 @@ import { Location } from '@/types/menu';
 const locations = locationsData.locations as Location[];
 
 export const metadata: Metadata = {
-  title: 'Location | Burger Heaven',
-  description: 'Visit us in New Westminster, BC. Order online through Skip the Dishes.',
+  title: 'Location | Burger Heaven - Local New Westminster BC Restaurant | 77 10th St',
+  description: 'Visit Burger Heaven at 77 10th St, New Westminster, BC V3M 3X4. Locally owned Canadian burger restaurant serving authentic burgers since 1985. Support local business. Call 604-522-8339 or order delivery.',
+  keywords: 'Burger Heaven New Westminster, 77 10th St restaurant, New Westminster burger restaurant, local restaurant BC, Canadian burger joint, New West dining, support local New Westminster, locally owned restaurant BC, burger restaurant near me',
 };
 
 export default function LocationsPage() {
@@ -20,10 +21,10 @@ export default function LocationsPage() {
         </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
           <h1 className="text-5xl md:text-6xl font-heading text-center mb-4" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
-            OUR LOCATION
+            OUR LOCAL NEW WESTMINSTER LOCATION
           </h1>
           <p className="text-xl text-center max-w-2xl mx-auto font-light">
-            Serving New Westminster with the best burgers around
+            Proudly serving authentic Canadian burgers in New Westminster, BC since 1985. Support local!
           </p>
         </div>
       </section>
@@ -39,17 +40,18 @@ export default function LocationsPage() {
                 className="diner-card rounded-2xl overflow-hidden scroll-mt-24 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Map Placeholder */}
-                <div className="h-64 bg-wood-300 relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-accent-700">
-                    <div className="text-center">
-                      <MapPinIcon className="w-16 h-16 mx-auto mb-2 text-primary-600" />
-                      <p className="text-sm font-semibold">Map: {location.name}</p>
-                      <p className="text-xs mt-1">
-                        Lat: {location.coordinates?.lat}, Lng: {location.coordinates?.lng}
-                      </p>
-                    </div>
-                  </div>
+                {/* Google Maps Embed */}
+                <div className="h-64 bg-wood-300 relative overflow-hidden">
+                  <iframe
+                    src={`https://maps.google.com/maps?q=${location.coordinates?.lat},${location.coordinates?.lng}&hl=en&z=15&output=embed`}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Map of ${location.name}`}
+                  ></iframe>
                 </div>
 
                 {/* Location Details */}

@@ -42,8 +42,8 @@ export default function Home() {
                 WELCOME TO BURGER HEAVEN
               </h1>
               <p className="text-xl md:text-2xl mb-10 text-wood-100 leading-relaxed font-light animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                Experience the ultimate burger paradise with our signature creations,
-                crafted with premium ingredients and served with passion.
+                A proud locally-owned Canadian restaurant serving New Westminster since 1985.
+                Experience authentic burgers crafted with premium local ingredients and served with passion.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 md:justify-start justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                 <Link
@@ -107,10 +107,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-heading text-accent-900 mb-3">
-              VISIT US
+              VISIT OUR LOCAL NEW WESTMINSTER RESTAURANT
             </h2>
             <p className="text-lg text-accent-700 font-light">
-              Serving New Westminster, BC
+              Proudly serving the best Canadian burgers in New Westminster, BC since 1985
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">

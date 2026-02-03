@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaTiktok } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -67,31 +67,22 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-4">Stay Connected</h4>
             <div className="flex space-x-4 mb-4">
               <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-accent-400 transition-colors"
-                aria-label="Facebook"
-              >
-                <FaFacebook className="h-6 w-6" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-accent-400 transition-colors"
-                aria-label="Twitter"
-              >
-                <FaTwitter className="h-6 w-6" />
-              </a>
-              <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/burgerheavennewwest/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent-400 transition-colors"
                 aria-label="Instagram"
               >
                 <FaInstagram className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@burgerheavennewwe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-accent-400 transition-colors"
+                aria-label="TikTok"
+              >
+                <FaTiktok className="h-6 w-6" />
               </a>
             </div>
             <p className="text-gray-400 text-sm mb-2">

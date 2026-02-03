@@ -78,14 +78,7 @@ export default function CareersPage() {
                 <div className="text-4xl mb-3">🍔</div>
                 <h3 className="font-bold text-lg mb-2 text-accent-900">Staff Meals</h3>
                 <p className="text-accent-800">
-                  Enjoy discounted meals during your shift
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center p-4">
-                <div className="text-4xl mb-3">🏥</div>
-                <h3 className="font-bold text-lg mb-2 text-accent-900">Benefits Package</h3>
-                <p className="text-accent-800">
-                  Full-time employees receive comprehensive benefits
+                  Enjoy free meals during your shift
                 </p>
               </div>
             </div>

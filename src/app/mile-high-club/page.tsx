@@ -91,16 +91,7 @@ export default function MileHighClubPage() {
             <h2 className="text-3xl md:text-4xl font-heading mb-6">
               WINNERS GET:
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-white/20 rounded-full p-3 flex-shrink-0">
-                  <CheckCircleIcon className="w-8 h-8" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl mb-2">Free Meal</h3>
-                  <p className="leading-relaxed">The burger is on us if you complete the challenge!</p>
-                </div>
-              </div>
+            <div className="grid md:grid-cols-3 gap-6">
               <div className="flex items-start gap-4">
                 <div className="bg-white/20 rounded-full p-3 flex-shrink-0">
                   <CheckCircleIcon className="w-8 h-8" />

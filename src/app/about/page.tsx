@@ -3,8 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'About Us | Burger Heaven',
-  description: 'Learn about Burger Heaven\'s story, our commitment to quality, and what makes our burgers special.',
+  title: 'About Us | Burger Heaven - Locally Owned Canadian Restaurant Since 1985',
+  description: 'Discover the story of Burger Heaven, a proud locally-owned Canadian restaurant serving New Westminster since 1985. Family-owned, Canadian ingredients, supporting local communities. Learn about our commitment to quality and authentic Canadian burgers.',
+  keywords: 'locally owned restaurant New Westminster, Canadian restaurant history, family owned burger restaurant, New Westminster since 1985, local business BC, Canadian burger restaurant, support local business, authentic Canadian food, New West local restaurant',
 };
 
 export default function AboutPage() {
@@ -20,7 +21,7 @@ export default function AboutPage() {
             ABOUT US
           </h1>
           <p className="text-xl text-center max-w-2xl mx-auto font-light">
-            Our story, our passion, our commitment to burger perfection
+            Proudly locally-owned and Canadian - serving authentic burgers in New Westminster since 1985
           </p>
         </div>
       </section>

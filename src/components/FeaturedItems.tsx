@@ -6,9 +6,10 @@ import Link from 'next/link';
 interface FeaturedItemsProps {
   items: MenuItem[];
   showDate?: boolean;
+  showViewMenuButton?: boolean;
 }
 
-export default function FeaturedItems({ items, showDate = true }: FeaturedItemsProps) {
+export default function FeaturedItems({ items, showDate = true, showViewMenuButton = true }: FeaturedItemsProps) {
   if (!items || items.length === 0) {
     return null;
   }
@@ -75,14 +76,16 @@ export default function FeaturedItems({ items, showDate = true }: FeaturedItemsP
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Link
-            href="/menu"
-            className="btn-primary inline-block rounded-full bg-gradient-to-r from-primary-600 to-primary-500 px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            <span className="relative z-10">View Full Menu</span>
-          </Link>
-        </div>
+        {showViewMenuButton && (
+          <div className="text-center mt-12">
+            <Link
+              href="/menu"
+              className="btn-primary inline-block rounded-full bg-gradient-to-r from-primary-600 to-primary-500 px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <span className="relative z-10">View Full Menu</span>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

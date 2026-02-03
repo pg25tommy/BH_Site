@@ -62,10 +62,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-lg mb-2 text-accent-900">Email</h3>
                     <a
-                      href="mailto:info@burgerheavennw.ca"
+                      href="mailto:burgerheaven@shaw.ca"
                       className="text-primary-600 hover:text-primary-700 transition-colors"
                     >
-                      info@burgerheavennw.ca
+                      burgerheaven@shaw.ca
                     </a>
                   </div>
                 </div>
@@ -76,28 +76,20 @@ export default function ContactPage() {
                 <h3 className="font-bold text-lg mb-4 text-accent-900">Follow Us</h3>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all hover:scale-105 shadow-md"
-                  >
-                    Facebook
-                  </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-sky-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-600 transition-all hover:scale-105 shadow-md"
-                  >
-                    Twitter
-                  </a>
-                  <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/burgerheavennewwest/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all hover:scale-105 shadow-md"
                   >
                     Instagram
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@burgerheavennewwe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-all hover:scale-105 shadow-md"
+                  >
+                    TikTok
                   </a>
                 </div>
               </div>

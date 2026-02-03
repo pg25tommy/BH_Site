@@ -8,8 +8,9 @@ import { getDailyFeaturedItems } from '@/utils/featuredItems';
 const menu = menuData as MenuData;
 
 export const metadata: Metadata = {
-  title: 'Menu | Burger Heaven',
-  description: 'Browse our extensive menu featuring signature burgers, specialty items, sandwiches, appetizers, and more.',
+  title: 'Menu | Burger Heaven - Authentic Canadian Burgers | Local New Westminster BC',
+  description: 'Browse our extensive menu of authentic Canadian burgers made with locally-sourced ingredients. Signature burgers, specialty items, sandwiches, and appetizers. Serving New Westminster since 1985. Support local!',
+  keywords: 'Canadian burger menu, local burger restaurant menu, New Westminster food menu, authentic Canadian burgers, locally sourced burgers, BC burger menu, Canadian beef burgers, local ingredients menu, New West burger menu',
 };
 
 export default function MenuPage() {
@@ -27,13 +28,13 @@ export default function MenuPage() {
             OUR MENU
           </h1>
           <p className="text-xl text-center max-w-2xl mx-auto font-light">
-            From classic favorites to adventurous creations, we have something for everyone
+            Authentic Canadian burgers made with locally-sourced ingredients. From classic favorites to adventurous creations - supporting local since 1985
           </p>
         </div>
       </section>
 
       {/* Daily Featured Items */}
-      <FeaturedItems items={featuredItems} showDate={false} />
+      <FeaturedItems items={featuredItems} showDate={false} showViewMenuButton={false} />
 
       {/* Quick Navigation */}
       <div className="sticky top-20 glass-card z-40" style={{ boxShadow: '0 4px 20px rgba(61, 45, 28, 0.1)' }}>
