@@ -10,7 +10,7 @@ const menu = menuData as MenuData;
 const locations = locationsData.locations as Location[];
 
 export default function Home() {
-  const featuredItems = getDailyFeaturedItems(menu, 6);
+  const featuredItems = getDailyFeaturedItems(menu, 4);
 
   return (
     <div>
