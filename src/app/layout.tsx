@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   title: "Burger Heaven | Best Local Burgers in New Westminster, BC | Canadian Restaurant",
   description: "Experience authentic Canadian burgers at Burger Heaven - a locally owned New Westminster restaurant serving premium, locally-sourced burgers since 1985. Support local, taste the difference. Famous Mile High Challenge.",
   keywords: "local burgers New Westminster, Canadian restaurant BC, buy local food, locally owned restaurant, New Westminster burgers, BC burger joint, Canadian beef burgers, local business New Westminster, support local restaurants, authentic Canadian food, best burgers BC, family owned restaurant, local ingredients, buy Canadian, New West dining, Lower Mainland burgers, mile high burger challenge, specialty burgers BC",
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: "Burger Heaven | Best Local Burgers in New Westminster, BC",
     description: "Locally owned Canadian restaurant serving premium burgers in New Westminster since 1985. Support local, taste authentic Canadian food.",

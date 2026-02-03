@@ -5,6 +5,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
+    // Debug: Check if API key is loaded
+    console.log('API Key loaded:', process.env.RESEND_API_KEY ? 'Yes' : 'No');
+
     const body = await request.json();
     const { firstName, lastName, email, phone, position, experience } = body;
 
@@ -16,10 +19,12 @@ export async function POST(request: Request) {
       );
     }
 
+    console.log('Attempting to send application email to:', 'tommy@knocktwice.ca');
+
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'Burger Heaven Careers <onboarding@resend.dev>', // This will be updated once domain is verified
-      to: ['burgerheavennewwest77@gmail.com'],
+      to: ['tommy@knocktwice.ca'], // Temporarily using verified email for testing
       subject: `New Job Application: ${position}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -50,12 +55,14 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error('Resend error:', error);
+      console.error('Resend error:', JSON.stringify(error, null, 2));
       return NextResponse.json(
-        { error: 'Failed to send application. Please try again later.' },
+        { error: 'Failed to send application. Please try again later.', details: error },
         { status: 500 }
       );
     }
+
+    console.log('Application email sent successfully! ID:', data?.id);
 
     return NextResponse.json(
       { message: 'Application submitted successfully!', data },
