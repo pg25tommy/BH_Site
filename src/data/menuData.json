@@ -17,7 +17,7 @@
           "name": "Chicken Wings",
           "description": "1 pound tossed in your choice of Hot, BBQ, Teriyaki, Sweet Thai Chili, Mango Habanero Sauce, or salt and pepper, served with carrot sticks. Your choice of dip.",
           "price": 20.69,
-          "image": "/images/menu/appetizers/chicken-wings.jpg"
+          "image": "/images/menu/appetizers/Chicken_Wings.jpg"
         },
         {
           "id": "onion-rings",
@@ -31,7 +31,7 @@
           "name": "Nacho Poutine",
           "description": "1/2 pound of our wedges topped with ground beef, olives, jalapenos, shredded cheddar and mozza, and a dollop of salsa and sour cream n' chives.",
           "price": 16.89,
-          "image": "/images/menu/appetizers/nacho-poutine.jpg"
+          "image": "/images/menu/appetizers/Natcho_Poutine.jpg"
         },
         {
           "id": "poutine",
@@ -73,7 +73,7 @@
           "name": "Toasted Wanker's Club",
           "description": "Egg, cheddar, bacon, lettuce, tomato and our special sauce. Jimmy's own favorite!!",
           "price": 20.09,
-          "image": "/images/menu/sandwiches/wankers-club.jpg"
+          "image": "/images/menu/sandwiches/Wankers_Club.jpg"
         },
         {
           "id": "heavenly-club",
@@ -257,7 +257,7 @@
           "name": "9. Mexican Meatless Garden Burger",
           "description": "With Salsa, Guacamole & Jalapenos",
           "price": 24.59,
-          "image": "/images/menu/burgers/mexican-meatless.jpg"
+          "image": "/images/menu/burgers/Mexican_Meatlless.jpg"
         },
         {
           "id": "breakfast-burger",
@@ -279,7 +279,7 @@
           "description": "Three pounds of meat. Eight patties high topped with THE WORKS!",
           "price": 72.69,
           "featured": true,
-          "image": "/images/menu/specialty/mile-high.jpg"
+          "image": "/images/menu/burgers/Ernies_Mile_High.jpg"
         },
         {
           "id": "awesome",
@@ -337,7 +337,7 @@
           "name": "The Spicy Inferno",
           "description": "Our cajun beef patty topped with habanero mango sauce, jack cheese, jalapenos and banana peppers.",
           "price": 27.19,
-          "image": "/images/menu/specialty/spicy-inferno.jpg"
+          "image": "/images/menu/burgers/Spicey_Inferno.jpg"
         },
         {
           "id": "greek-goddess-veggie",
@@ -372,21 +372,21 @@
           "name": "Artisan Salad (Appy Size)",
           "description": "Our artisan salad with tomatoes, red onions, cabbage, carrots and feta. Served with garlic toast. Add Chicken: $5.59 · Add Cod: $5.89",
           "price": 9.59,
-          "image": "/images/menu/salads/artisan-appy.jpg"
+          "image": "/images/menu/salads/Appy_Artisan_Salad.jpg"
         },
         {
           "id": "artisan-dinner",
           "name": "Artisan Salad (Dinner Size)",
           "description": "Our artisan salad with tomatoes, red onions, cabbage, carrots and feta. Served with garlic toast. Add Chicken: $5.59 · Add Cod: $5.89",
           "price": 13.49,
-          "image": "/images/menu/salads/artisan-dinner.jpg"
+          "image": "/images/menu/salads/Artisan_Salad.jpg"
         },
         {
           "id": "mediterranean",
           "name": "Mediterranean Salad",
           "description": "Our artisan salad with artichoke hearts, tomatoes, kalamata olives, feta cheese and toasted pine nuts. Served with your choice of dressing and garlic toast. Salad dressings: Strawberry Vinaigrette, Ranch, Sundried Tomato, 1000 Island, Blue Cheese, French, Italian, Honey Mustard. Add Chicken: $5.59 · Add Cod: $5.89",
           "price": 13.49,
-          "image": "/images/menu/salads/mediterranean.jpg"
+          "image": "/images/menu/salads/Mediterranean_Salad.jpg"
         },
         {
           "id": "soup-cup",
@@ -421,7 +421,7 @@
           "name": "Chocolate",
           "description": "Rich chocolate milkshake",
           "price": 5.74,
-          "image": "/images/menu/milkshakes/chocolate-shake.jpg"
+          "image": "/images/menu/milkshakes/Choclate_Millshake.jpg"
         },
         {
           "id": "strawberry-shake",
@@ -575,14 +575,14 @@
           "name": "Steel 'n' Oak (20 oz. glass)",
           "description": "Steel 'n' Oak on draft",
           "price": 7.99,
-          "image": "/images/menu/beer-ciders/steel-oak-glass.jpg"
+          "image": "/images/menu/beer-ciders/Steel_and_Oak_IPA.jpg"
         },
         {
           "id": "steel-oak-pitcher",
           "name": "Steel 'n' Oak Pitcher (60 oz.)",
           "description": "Steel 'n' Oak pitcher",
           "price": 21.34,
-          "image": "/images/menu/beer-ciders/steel-oak-pitcher.jpg"
+          "image": "/images/menu/beer-ciders/Steel_and_Oak_IPA.jpg"
         },
         {
           "id": "gimme-gamble",
