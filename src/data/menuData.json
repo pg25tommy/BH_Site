@@ -129,21 +129,21 @@
           "name": "Heaven Sent Beef Burger",
           "description": "With lettuce, tomato, red onions and our burger sauce. Add an extra patty for $4.49",
           "price": 18.09,
-          "image": "/images/menu/burgers/beef-burger.jpg"
+          "image": "/images/menu/burgers/The_Heaven_Sent_Beef_Burger.webp"
         },
         {
           "id": "grilled-chicken-burger",
           "name": "Heaven Sent Grilled Chicken Burger",
           "description": "With lettuce, tomato and our burger sauce. Add an extra chicken breast $5.59",
           "price": 20.79,
-          "image": "/images/menu/burgers/grilled-chicken-burger.jpg"
+          "image": "/images/menu/burgers/The_Hevaen_Sent_Grilled_Chicken_Burger.webp"
         },
         {
           "id": "meatless-burger",
           "name": "Heaven Sent Meatless Burger",
           "description": "With lettuce, tomato, red onions and our burger sauce. Add an extra patty for $4.69",
           "price": 18.49,
-          "image": "/images/menu/burgers/meatless-burger.jpg"
+          "image": "/images/menu/burgers/The_Hevaen_Sent_Veggie_Burger.webp"
         },
         {
           "id": "cod-burger",
@@ -200,7 +200,7 @@
           "description": "Cheddar, Mozzarella, Bacon & Mushrooms with Dill Pickles. A Heavenly Meal at a heck of a deal.",
           "price": 25.89,
           "featured": true,
-          "image": "/images/menu/burgers/works-burger.jpg"
+          "image": "/images/menu/burgers/The_Works.webp"
         },
         {
           "id": "perogy-burger",
@@ -208,7 +208,7 @@
           "description": "4 mini cheese and potato perogies, sautéed onion and shredded mozza and cheddar cheese topped with a dollop of sour cream n' chives",
           "price": 25.69,
           "featured": true,
-          "image": "/images/menu/burgers/perogy-burger.jpg"
+          "image": "/images/menu/burgers/The_Perogy.webp"
         },
         {
           "id": "bbq-cheddar-bacon",
@@ -250,7 +250,7 @@
           "name": "8. Teriyaki Grilled Chicken, Swiss & Bacon Burger",
           "description": "It will make you yodel!!",
           "price": 27.99,
-          "image": "/images/menu/burgers/teriyaki-chicken.jpg"
+          "image": "/images/menu/burgers/The_Teryaki_Grilled_Chicken_and_Swiss.webp"
         },
         {
           "id": "mexican-meatless",
@@ -330,7 +330,7 @@
           "name": "Chicken Cordon Bleu Burger",
           "description": "A tender breast filet, breaded and fried to golden perfection, then topped with ham, melted mozzarella, tomato, lettuce and our special sauce.",
           "price": 25.89,
-          "image": "/images/menu/specialty/chicken-cordon-bleu.jpg"
+          "image": "/images/menu/burgers/The_Cordon_Blue.webp"
         },
         {
           "id": "spicy-inferno",
