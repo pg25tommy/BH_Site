@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'Burger Heaven Careers <onboarding@resend.dev>', // This will be updated once domain is verified
-      to: ['burgerheaven@shaw.ca'],
+      to: ['burgerheavennewwest77@gmail.com'],
       subject: `New Job Application: ${position}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
