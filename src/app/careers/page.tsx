@@ -1,11 +1,22 @@
-import { Metadata } from 'next';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'Careers | Burger Heaven',
-  description: 'Join the Burger Heaven team. Explore career opportunities at our New Westminster location.',
-};
+import { useState } from 'react';
 
 export default function CareersPage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    position: '',
+    experience: '',
+    authorized: false,
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
   const positions = [
     {
       title: 'Line Cook',
@@ -20,6 +31,63 @@ export default function CareersPage() {
       description: 'Provide exceptional customer service in our fun, heaven-themed restaurant. Great for those who love working with people. Tips included. Previous serving experience is an asset but not required.',
     },
   ];
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/apply', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Application submitted successfully! We\'ll be in touch soon.',
+        });
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          position: '',
+          experience: '',
+          authorized: false,
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Failed to submit application. Please try again.',
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'An unexpected error occurred. Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value, type } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value,
+    }));
+  };
 
   return (
     <div className="bg-wood-100 min-h-screen">
@@ -119,34 +187,60 @@ export default function CareersPage() {
             <p className="text-center text-accent-800 mb-8 font-light">
               Fill out the application below or drop off your resume in person
             </p>
-            <form className="space-y-4 max-w-2xl mx-auto">
+            {submitStatus.type && (
+              <div
+                className={`max-w-2xl mx-auto mb-6 p-4 rounded-xl ${
+                  submitStatus.type === 'success'
+                    ? 'bg-green-50 border-2 border-green-500 text-green-800'
+                    : 'bg-red-50 border-2 border-red-500 text-red-800'
+                }`}
+              >
+                <p className="font-semibold">{submitStatus.message}</p>
+              </div>
+            )}
+            <form onSubmit={handleSubmit} className="space-y-4 max-w-2xl mx-auto">
               <div className="grid md:grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="firstName"
                   placeholder="First Name"
+                  value={formData.firstName}
+                  onChange={handleChange}
                   className="w-full px-5 py-3 border-2 border-wood-300 rounded-full bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                   required
                 />
                 <input
                   type="text"
+                  name="lastName"
                   placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={handleChange}
                   className="w-full px-5 py-3 border-2 border-wood-300 rounded-full bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                   required
                 />
               </div>
               <input
                 type="email"
+                name="email"
                 placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
                 className="w-full px-5 py-3 border-2 border-wood-300 rounded-full bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                 required
               />
               <input
                 type="tel"
+                name="phone"
                 placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
                 className="w-full px-5 py-3 border-2 border-wood-300 rounded-full bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                 required
               />
               <select
+                name="position"
+                value={formData.position}
+                onChange={handleChange}
                 className="w-full px-5 py-3 border-2 border-wood-300 rounded-full bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                 required
               >
@@ -161,14 +255,24 @@ export default function CareersPage() {
                 <p className="text-accent-900"><strong>Location:</strong> New Westminster</p>
               </div>
               <textarea
+                name="experience"
                 placeholder="Tell us about your experience and why you want to work at Burger Heaven"
+                value={formData.experience}
+                onChange={handleChange}
                 rows={5}
                 className="w-full px-5 py-3 border-2 border-wood-300 rounded-2xl bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                 required
               ></textarea>
               <div className="text-sm text-accent-800">
                 <label className="flex items-start gap-2">
-                  <input type="checkbox" className="mt-1 accent-primary-600" required />
+                  <input
+                    type="checkbox"
+                    name="authorized"
+                    checked={formData.authorized}
+                    onChange={handleChange}
+                    className="mt-1 accent-primary-600"
+                    required
+                  />
                   <span>
                     I confirm that the information provided is accurate and I am legally
                     authorized to work in Canada
@@ -177,9 +281,10 @@ export default function CareersPage() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-primary-600 to-primary-500 hover:shadow-xl text-white font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-primary-600 to-primary-500 hover:shadow-xl text-white font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                Submit Application
+                {isSubmitting ? 'Submitting...' : 'Submit Application'}
               </button>
             </form>
           </div>
