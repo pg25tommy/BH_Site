@@ -190,13 +190,6 @@
           "description": "Crisp bacon, crunchy lettuce and slices of ripe tomato. A combination of compliments that wins compliments. Add cheddar: $1.47",
           "price": 15.09,
           "image": "/images/menu/sandwiches/blt.jpg"
-        },
-        {
-          "id": "fish-chips",
-          "name": "Fish 'n' Chips",
-          "description": "Extra piece of Cod $5.84",
-          "price": 22.89,
-          "image": "/images/menu/sandwiches/Fish_and_Chips.jpg"
         }
       ]
     },
@@ -312,6 +305,13 @@
           "description": "Grilled veggie burger topped off with sundried tomatoes, feta, green peppers and hummus.",
           "price": 25.29,
           "image": "/images/menu/specialty/Greek_Goddess_Burger.webp"
+        },
+        {
+          "id": "fish-chips",
+          "name": "Fish 'n' Chips",
+          "description": "Extra piece of Cod $5.84",
+          "price": 22.89,
+          "image": "/images/menu/sandwiches/Fish_and_Chips.jpg"
         }
       ]
     },

@@ -27,14 +27,27 @@ export default function MenuPage() {
           <h1 className="text-5xl md:text-6xl font-heading text-center mb-4" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
             OUR MENU
           </h1>
-          <p className="text-xl text-center max-w-2xl mx-auto font-light">
+          <p className="text-xl text-center max-w-2xl mx-auto font-light mb-8">
             Authentic Canadian burgers made with locally-sourced ingredients. From classic favorites to adventurous creations - supporting local since 1985
           </p>
+          <div className="flex justify-center">
+            <a
+              href="#menu-content"
+              className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm border border-white/30"
+            >
+              <span>Explore Menu</span>
+              <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Daily Featured Items */}
-      <FeaturedItems items={featuredItems} showDate={false} showViewMenuButton={false} />
+      <div id="menu-content">
+        <FeaturedItems items={featuredItems} showDate={false} showViewMenuButton={false} />
+      </div>
 
       {/* Quick Navigation */}
       <div className="sticky top-20 glass-card z-40" style={{ boxShadow: '0 4px 20px rgba(61, 45, 28, 0.1)' }}>
@@ -70,34 +83,38 @@ export default function MenuPage() {
       {/* Menu Categories */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         {menu.categories.map((category) => (
-          <MenuCategory key={category.id} category={category} />
-        ))}
+          <div key={category.id}>
+            <MenuCategory category={category} />
 
-        {/* Toppings Section */}
-        <section id="toppings" className="mb-16 scroll-mt-24">
-          <div className="mb-10">
-            <h2 className="text-4xl font-heading text-primary-700 mb-3">
-              Build Your Own - Toppings
-            </h2>
-            <p className="text-accent-700 font-light">
-              Customize your burger with our premium toppings
-            </p>
+            {/* Toppings Section - Show after Create Your Own category */}
+            {category.id === 'create-your-own' && (
+              <section id="toppings" className="mb-16 scroll-mt-24">
+                <div className="mb-10">
+                  <h2 className="text-4xl font-heading text-primary-700 mb-3">
+                    Build Your Own - Toppings
+                  </h2>
+                  <p className="text-accent-700 font-light">
+                    Customize your burger with our premium toppings
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {menu.toppings.map((topping: Topping, index) => (
+                    <div
+                      key={topping.id}
+                      className="diner-card rounded-xl p-4 flex justify-between items-center group"
+                      style={{ animationDelay: `${index * 0.03}s` }}
+                    >
+                      <span className="text-accent-900 font-medium group-hover:text-primary-700 transition-colors">{topping.name}</span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-primary-600 to-primary-500 text-white text-sm font-bold rounded-full shadow-sm">
+                        +${topping.price.toFixed(2)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {menu.toppings.map((topping: Topping, index) => (
-              <div
-                key={topping.id}
-                className="diner-card rounded-xl p-4 flex justify-between items-center group"
-                style={{ animationDelay: `${index * 0.03}s` }}
-              >
-                <span className="text-accent-900 font-medium group-hover:text-primary-700 transition-colors">{topping.name}</span>
-                <span className="px-3 py-1 bg-gradient-to-r from-primary-600 to-primary-500 text-white text-sm font-bold rounded-full shadow-sm">
-                  +${topping.price.toFixed(2)}
-                </span>
-              </div>
-            ))}
-          </div>
-        </section>
+        ))}
 
         {/* Note */}
         <div className="glass-card border-l-4 border-primary-500 p-6 rounded-xl">

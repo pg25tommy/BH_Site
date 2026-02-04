@@ -33,7 +33,24 @@ export default function MileHighClubPage() {
       {/* Challenge Details */}
       <section className="section-padding">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          {/* Hall of Fame */}
           <div className="diner-card rounded-2xl p-8 md:p-12 mb-12 animate-fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-heading text-primary-700 mb-6 text-center">
+              HALL OF FAME
+            </h2>
+            <p className="text-center text-accent-800 mb-8 leading-relaxed">
+              These brave souls have conquered the Mile High Challenge
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                <div key={i} className="aspect-square bg-wood-300 rounded-2xl flex items-center justify-center border-2 border-wood-400 hover:scale-105 transition-transform duration-300">
+                  <span className="text-accent-700 text-sm font-semibold">Winner #{i}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="diner-card rounded-2xl p-8 md:p-12 mb-12 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <h2 className="text-3xl md:text-4xl font-heading text-primary-700 mb-6">
               THE CHALLENGE
             </h2>
@@ -119,23 +136,6 @@ export default function MileHighClubPage() {
                   <p className="leading-relaxed">Forever known as a Burger Heaven legend</p>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Hall of Fame */}
-          <div className="diner-card rounded-2xl p-8 md:p-12 mb-12 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <h2 className="text-3xl md:text-4xl font-heading text-primary-700 mb-6 text-center">
-              HALL OF FAME
-            </h2>
-            <p className="text-center text-accent-800 mb-8 leading-relaxed">
-              These brave souls have conquered the Mile High Challenge
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                <div key={i} className="aspect-square bg-wood-300 rounded-2xl flex items-center justify-center border-2 border-wood-400 hover:scale-105 transition-transform duration-300">
-                  <span className="text-accent-700 text-sm font-semibold">Winner #{i}</span>
-                </div>
-              ))}
             </div>
           </div>
 
