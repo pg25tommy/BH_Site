@@ -1,13 +1,12 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { escapeHtml, validateEmail, validatePhone, validateLength, sanitizeFilename, isPDF } from '@/utils/security';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const RECIPIENT_EMAIL = process.env.CONTACT_EMAIL || 'tommy@knocktwice.ca';
 
 export async function POST(request: Request) {
   try {
-    // Debug: Check if API key is loaded
-    console.log('API Key loaded:', process.env.RESEND_API_KEY ? 'Yes' : 'No');
-
     const formData = await request.formData();
     const firstName = formData.get('firstName') as string;
     const lastName = formData.get('lastName') as string;
@@ -25,24 +24,87 @@ export async function POST(request: Request) {
       );
     }
 
-    console.log('Attempting to send application email to:', 'tommy@knocktwice.ca');
+    // Validate field lengths
+    if (!validateLength(firstName, 50) || !validateLength(lastName, 50)) {
+      return NextResponse.json(
+        { error: 'Name fields must be between 1 and 50 characters' },
+        { status: 400 }
+      );
+    }
+
+    if (!validateLength(position, 100)) {
+      return NextResponse.json(
+        { error: 'Position must be between 1 and 100 characters' },
+        { status: 400 }
+      );
+    }
+
+    if (!validateLength(experience, 5000)) {
+      return NextResponse.json(
+        { error: 'Experience must be between 1 and 5000 characters' },
+        { status: 400 }
+      );
+    }
+
+    // Validate email format
+    if (!validateEmail(email)) {
+      return NextResponse.json(
+        { error: 'Invalid email address' },
+        { status: 400 }
+      );
+    }
+
+    // Validate phone format
+    if (!validatePhone(phone)) {
+      return NextResponse.json(
+        { error: 'Invalid phone number format' },
+        { status: 400 }
+      );
+    }
 
     // Prepare attachments if resume is provided
     const attachments = [];
     if (resumeFile && resumeFile.size > 0) {
+      // Validate file size (max 5MB)
+      if (resumeFile.size > 5 * 1024 * 1024) {
+        return NextResponse.json(
+          { error: 'Resume file size must be less than 5MB' },
+          { status: 400 }
+        );
+      }
+
       const buffer = await resumeFile.arrayBuffer();
+
+      // Validate that it's actually a PDF by checking magic bytes
+      if (!isPDF(buffer)) {
+        return NextResponse.json(
+          { error: 'Invalid file format. Only PDF files are allowed.' },
+          { status: 400 }
+        );
+      }
+
       const base64 = Buffer.from(buffer).toString('base64');
+      const safeFilename = sanitizeFilename(resumeFile.name);
+
       attachments.push({
-        filename: resumeFile.name,
+        filename: safeFilename,
         content: base64,
       });
     }
 
+    // Escape all user input to prevent XSS
+    const safeFirstName = escapeHtml(firstName);
+    const safeLastName = escapeHtml(lastName);
+    const safeEmail = escapeHtml(email);
+    const safePhone = escapeHtml(phone);
+    const safePosition = escapeHtml(position);
+    const safeExperience = escapeHtml(experience);
+
     // Send email using Resend
     const emailOptions: any = {
-      from: 'Burger Heaven Careers <onboarding@resend.dev>', // This will be updated once domain is verified
-      to: ['tommy@knocktwice.ca'], // Temporarily using verified email for testing
-      subject: `${position} - ${firstName} ${lastName}`,
+      from: 'Burger Heaven Careers <onboarding@resend.dev>',
+      to: [RECIPIENT_EMAIL],
+      subject: `${safePosition} - ${safeFirstName} ${safeLastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #ea580c; border-bottom: 2px solid #ea580c; padding-bottom: 10px;">
@@ -51,20 +113,20 @@ export async function POST(request: Request) {
 
           <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #333; margin-top: 0;">Applicant Information</h3>
-            <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-            <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-            <p><strong>Phone:</strong> ${phone}</p>
-            <p><strong>Position Applied For:</strong> ${position}</p>
+            <p><strong>Name:</strong> ${safeFirstName} ${safeLastName}</p>
+            <p><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>
+            <p><strong>Phone:</strong> ${safePhone}</p>
+            <p><strong>Position Applied For:</strong> ${safePosition}</p>
           </div>
 
           <div style="background-color: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
             <h3 style="color: #333; margin-top: 0;">Experience & Message</h3>
-            <p style="white-space: pre-wrap; line-height: 1.6;">${experience}</p>
+            <p style="white-space: pre-wrap; line-height: 1.6;">${safeExperience}</p>
           </div>
 
           <div style="margin-top: 20px; padding: 15px; background-color: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 4px;">
             <p style="margin: 0; font-size: 14px; color: #92400e;">
-              <strong>Note:</strong> Please respond to the applicant at ${email}${resumeFile ? ' | Resume attached' : ''}
+              <strong>Note:</strong> Please respond to the applicant at ${safeEmail}${resumeFile ? ' | Resume attached' : ''}
             </p>
           </div>
         </div>
@@ -79,14 +141,12 @@ export async function POST(request: Request) {
     const { data, error } = await resend.emails.send(emailOptions);
 
     if (error) {
-      console.error('Resend error:', JSON.stringify(error, null, 2));
+      console.error('Application - Email send error');
       return NextResponse.json(
-        { error: 'Failed to send application. Please try again later.', details: error },
+        { error: 'Failed to send application. Please try again later.' },
         { status: 500 }
       );
     }
-
-    console.log('Application email sent successfully! ID:', data?.id);
 
     return NextResponse.json(
       { message: 'Application submitted successfully!', data },
