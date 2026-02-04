@@ -9,12 +9,12 @@ export async function POST(request: Request) {
     console.log('API Key loaded:', process.env.RESEND_API_KEY ? 'Yes' : 'No');
 
     const body = await request.json();
-    const { name, email, phone, message } = body;
+    const { name, email, phone, subject, message } = body;
 
     // Validate required fields
-    if (!name || !email || !message) {
+    if (!name || !email || !subject || !message) {
       return NextResponse.json(
-        { error: 'Name, email, and message are required' },
+        { error: 'Name, email, subject, and message are required' },
         { status: 400 }
       );
     }
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     const { data, error } = await resend.emails.send({
       from: 'Burger Heaven Contact <onboarding@resend.dev>', // This will be updated once domain is verified
       to: ['tommy@knocktwice.ca'], // Temporarily using verified email for testing
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `${subject} - ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #ea580c; border-bottom: 2px solid #ea580c; padding-bottom: 10px;">
@@ -34,6 +34,7 @@ export async function POST(request: Request) {
 
           <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #333; margin-top: 0;">Contact Information</h3>
+            <p><strong>Subject:</strong> ${subject}</p>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
             ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
