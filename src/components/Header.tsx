@@ -16,6 +16,7 @@ export default function Header() {
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Reviews', href: '/reviews' },
   ];
 
   return (
@@ -32,12 +33,12 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:gap-x-6 relative">
+          <div className="hidden lg:flex lg:items-center lg:gap-x-4 relative">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold text-wood-900 hover:text-primary-600 transition-all duration-200 relative group px-2 py-1"
+                className="text-sm font-semibold text-wood-900 hover:text-primary-600 transition-all duration-200 relative group px-1.5 py-1"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
