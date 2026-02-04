@@ -49,7 +49,7 @@ export function validatePhone(phone: string): boolean {
  * @returns True if text length is within limits
  */
 export function validateLength(text: string, maxLength: number): boolean {
-  return text && text.length > 0 && text.length <= maxLength;
+  return Boolean(text && text.length > 0 && text.length <= maxLength);
 }
 
 /**
