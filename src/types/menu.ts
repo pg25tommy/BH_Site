@@ -5,6 +5,7 @@ export interface MenuItem {
   price: number;
   image?: string;
   featured?: boolean;
+  bestSeller?: boolean;
   available?: boolean;
 }
 

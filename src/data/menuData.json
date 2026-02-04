@@ -1,6 +1,87 @@
 {
   "categories": [
     {
+      "id": "top-10",
+      "name": "Your Top 10!",
+      "description": "All our burgers are served with your choice of wedges or mixed greens. Substitute Caesar Salad, Onion Rings, Poutine or loaded wedges $3.09 · Substitute Yam wedges $2.99 · Hot gravy for your wedges $1.50",
+      "items": [
+        {
+          "id": "works-burger",
+          "name": "1. \"The Works\" Burger",
+          "description": "Cheddar, Mozzarella, Bacon & Mushrooms with Dill Pickles. A Heavenly Meal at a heck of a deal.",
+          "price": 25.89,
+          "featured": true,
+          "bestSeller": true,
+          "image": "/images/menu/burgers/The_Works.webp"
+        },
+        {
+          "id": "perogy-burger",
+          "name": "2. Perogy Beef Burger",
+          "description": "4 mini cheese and potato perogies, sautéed onion and shredded mozza and cheddar cheese topped with a dollop of sour cream n' chives",
+          "price": 25.69,
+          "featured": true,
+          "image": "/images/menu/burgers/The_Perogy.webp"
+        },
+        {
+          "id": "bbq-cheddar-bacon",
+          "name": "3. BBQ, Cheddar, Bacon & Mushroom Burger",
+          "description": "Democratically elected for its classic simplicity",
+          "price": 24.49,
+          "image": "/images/menu/burgers/BBQ_Cheadar_Mushroom_Burger.jpg"
+        },
+        {
+          "id": "teriyaki-mozz-bacon",
+          "name": "4. Teriyaki, Mozzarella, Bacon & Mushroom Burger",
+          "description": "Miss Piggy's favorite",
+          "price": 24.49,
+          "image": "/images/menu/burgers/Teryaki_MushRoom_Mozza_bacon_burger.webp"
+        },
+        {
+          "id": "swiss-mozz-pickle",
+          "name": "5. Swiss, Mozzarella & Pickle Burger",
+          "description": "A cheese lover's dream, with a zing",
+          "price": 23.19,
+          "image": "/images/menu/burgers/swiss-mozz-pickle.jpg"
+        },
+        {
+          "id": "thai-beef",
+          "name": "6. Thai Beef Burger",
+          "description": "Crunchy peanut butter, bacon, green onion and sweet thai chilli sauce",
+          "price": 22.89,
+          "image": "/images/menu/burgers/Thai_Beef_Burger.jpg"
+        },
+        {
+          "id": "breaded-chicken",
+          "name": "7. Breaded Chicken, Bacon, Cheddar & Mozzarella Burger",
+          "description": "Perfection",
+          "price": 27.19,
+          "bestSeller": true,
+          "image": "/images/menu/burgers/Breaded_Chicken_Cheedar_Mozza_Bacon.jpg"
+        },
+        {
+          "id": "teriyaki-chicken",
+          "name": "8. Teriyaki Grilled Chicken, Swiss & Bacon Burger",
+          "description": "It will make you yodel!!",
+          "price": 27.99,
+          "image": "/images/menu/burgers/The_Teryaki_Grilled_Chicken_and_Swiss.webp"
+        },
+        {
+          "id": "mexican-meatless",
+          "name": "9. Mexican Meatless Garden Burger",
+          "description": "With Salsa, Guacamole & Jalapenos",
+          "price": 24.59,
+          "image": "/images/menu/burgers/Mexican_Meatlless.jpg"
+        },
+        {
+          "id": "breakfast-burger",
+          "name": "10. Breakfast Burger, Mozzarella, Fried Egg & Bacon",
+          "description": "Gooood Morningnn!!",
+          "price": 25.09,
+          "image": "/images/menu/burgers/Breakfast_Burger.jpg"
+        }
+      ]
+    },
+    {
       "id": "appetizers",
       "name": "Angelic Appetizers",
       "description": "Start your meal right",
@@ -10,7 +91,7 @@
           "name": "Chicken Fingers",
           "description": "1/2 pound of wedges or salad - Breaded chicken tenders, fried to golden perfection (your choice of dip).",
           "price": 18.09,
-          "image": "/images/menu/appetizers/chicken-fingers.jpg"
+          "image": "/images/menu/appetizers/Chicken_Tenders.jpg"
         },
         {
           "id": "chicken-wings",
@@ -24,7 +105,7 @@
           "name": "Onion Rings",
           "description": "Does rings around your appetite (your choice of dip).",
           "price": 13.99,
-          "image": "/images/menu/appetizers/onion-rings.jpg"
+          "image": "/images/menu/appetizers/Onion_Rings.jpg"
         },
         {
           "id": "nacho-poutine",
@@ -38,21 +119,21 @@
           "name": "Poutine",
           "description": "1/2 pound of our wedges smothered with cheese curds and gravy.",
           "price": 13.99,
-          "image": "/images/menu/appetizers/poutine.jpg"
+          "image": "/images/menu/appetizers/Gravey.webp"
         },
         {
           "id": "loaded-wedges",
           "name": "Loaded Potato Wedges",
           "description": "1/2 pound of wedges smothered with cheese & topped with real bacon bits and sour cream n' chives.",
           "price": 14.49,
-          "image": "/images/menu/appetizers/loaded-wedges.jpg"
+          "image": "/images/menu/appetizers/Cheese_And_Bits.jpg"
         },
         {
           "id": "magic-mushrooms",
           "name": "Magic Mushrooms (not the real thing!)",
           "description": "Lightly coated with our special breading (your choice of dip).",
           "price": 13.99,
-          "image": "/images/menu/appetizers/magic-mushrooms.jpg"
+          "image": "/images/menu/appetizers/Magic_Mushrooms.jpg"
         },
         {
           "id": "yam-wedges",
@@ -80,14 +161,14 @@
           "name": "Toasted Heavenly Club",
           "description": "Cheddar, ham, bacon, tomato, lettuce our special sauce. It's a bite of heaven!!",
           "price": 21.09,
-          "image": "/images/menu/sandwiches/heavenly-club.jpg"
+          "image": "/images/menu/sandwiches/Heavenly_Club.jpg"
         },
         {
           "id": "chicken-club",
           "name": "Toasted Chicken Club",
           "description": "Chicken, tomato, lettuce, bacon and our special sauce.",
           "price": 23.29,
-          "image": "/images/menu/sandwiches/chicken-club.jpg"
+          "image": "/images/menu/sandwiches/Chicken_Club.jpg"
         },
         {
           "id": "grilled-cheddar-cheese",
@@ -115,7 +196,7 @@
           "name": "Fish 'n' Chips",
           "description": "Extra piece of Cod $5.84",
           "price": 22.89,
-          "image": "/images/menu/sandwiches/fish-chips.jpg"
+          "image": "/images/menu/sandwiches/Fish_and_Chips.jpg"
         }
       ]
     },
@@ -155,6 +236,86 @@
       ]
     },
     {
+      "id": "specialty",
+      "name": "To Die For Specialty Burgers",
+      "description": "Premium creations for the adventurous",
+      "items": [
+        {
+          "id": "mile-high",
+          "name": "Ernie's Mile High",
+          "description": "Three pounds of meat. Eight patties high topped with THE WORKS!",
+          "price": 72.69,
+          "featured": true,
+          "image": "/images/menu/burgers/Ernies_Mile_High.jpg"
+        },
+        {
+          "id": "awesome",
+          "name": "Awesome! Awesome! Awesome!",
+          "description": "A pound in a half of meat topped off with THE WORKS.",
+          "price": 45.49,
+          "featured": true,
+          "image": "/images/menu/specialty/Awesome_Burger.jpg"
+        },
+        {
+          "id": "hulk-burger",
+          "name": "Hulk Burger",
+          "description": "This Two patty burger comes with THE WORKS!",
+          "price": 31.09,
+          "featured": true,
+          "image": "/images/menu/specialty/Hullk_Burger.webp"
+        },
+        {
+          "id": "greek-god",
+          "name": "Greek God Burger",
+          "description": "A fresh grade \"A\" lean beef patty topped with green peppers, black olives & feta cheese & tzatziki. Food for the God's indeed!",
+          "price": 24.89,
+          "image": "/images/menu/specialty/greek-god.jpg"
+        },
+        {
+          "id": "insanity",
+          "name": "Insanity Burger",
+          "description": "Our beef burger topped with swiss and bacon between two grilled cheese sandwiches.",
+          "price": 29.99,
+          "image": "/images/menu/specialty/Insanity_Burger.webp"
+        },
+        {
+          "id": "chicken-marinara",
+          "name": "Chicken Marinara Burger",
+          "description": "A breaded chicken breast topped with marinara, parmesan and mozzarella.",
+          "price": 27.19,
+          "image": "/images/menu/specialty/Chicken_Marinara.jpg"
+        },
+        {
+          "id": "hawaiian",
+          "name": "Hawaiian Burger",
+          "description": "A teriyaki burger topped with ham, pineapple ring, lettuce, tomato, onions and mozzarella. Beats poi any day!",
+          "price": 25.89,
+          "image": "/images/menu/specialty/hawaiian.jpg"
+        },
+        {
+          "id": "chicken-cordon-bleu",
+          "name": "Chicken Cordon Bleu Burger",
+          "description": "A tender breast filet, breaded and fried to golden perfection, then topped with ham, melted mozzarella, tomato, lettuce and our special sauce.",
+          "price": 25.89,
+          "image": "/images/menu/burgers/The_Cordon_Blue.webp"
+        },
+        {
+          "id": "spicy-inferno",
+          "name": "The Spicy Inferno",
+          "description": "Our cajun beef patty topped with habanero mango sauce, jack cheese, jalapenos and banana peppers.",
+          "price": 27.19,
+          "image": "/images/menu/burgers/Spicey_Inferno.jpg"
+        },
+        {
+          "id": "greek-goddess-veggie",
+          "name": "Greek Goddess Veggie Burger",
+          "description": "Grilled veggie burger topped off with sundried tomatoes, feta, green peppers and hummus.",
+          "price": 25.29,
+          "image": "/images/menu/specialty/Greek_Goddess_Burger.webp"
+        }
+      ]
+    },
+    {
       "id": "kids-seniors",
       "name": "Lil Angels (Under 12) & Seniors (65+)",
       "description": "Served with a small pop, milk, juice or coffee, potato wedges or salad and a small sundae.",
@@ -190,165 +351,6 @@
       ]
     },
     {
-      "id": "top-10",
-      "name": "Your Top 10!",
-      "description": "All our burgers are served with your choice of wedges or mixed greens. Substitute Caesar Salad, Onion Rings, Poutine or loaded wedges $3.09 · Substitute Yam wedges $2.99 · Hot gravy for your wedges $1.50",
-      "items": [
-        {
-          "id": "works-burger",
-          "name": "1. \"The Works\" Burger",
-          "description": "Cheddar, Mozzarella, Bacon & Mushrooms with Dill Pickles. A Heavenly Meal at a heck of a deal.",
-          "price": 25.89,
-          "featured": true,
-          "image": "/images/menu/burgers/The_Works.webp"
-        },
-        {
-          "id": "perogy-burger",
-          "name": "2. Perogy Beef Burger",
-          "description": "4 mini cheese and potato perogies, sautéed onion and shredded mozza and cheddar cheese topped with a dollop of sour cream n' chives",
-          "price": 25.69,
-          "featured": true,
-          "image": "/images/menu/burgers/The_Perogy.webp"
-        },
-        {
-          "id": "bbq-cheddar-bacon",
-          "name": "3. BBQ, Cheddar, Bacon & Mushroom Burger",
-          "description": "Democratically elected for its classic simplicity",
-          "price": 24.49,
-          "image": "/images/menu/burgers/bbq-cheddar-bacon.jpg"
-        },
-        {
-          "id": "teriyaki-mozz-bacon",
-          "name": "4. Teriyaki, Mozzarella, Bacon & Mushroom Burger",
-          "description": "Miss Piggy's favorite",
-          "price": 24.49,
-          "image": "/images/menu/burgers/teriyaki-mozz-bacon.jpg"
-        },
-        {
-          "id": "swiss-mozz-pickle",
-          "name": "5. Swiss, Mozzarella & Pickle Burger",
-          "description": "A cheese lover's dream, with a zing",
-          "price": 23.19,
-          "image": "/images/menu/burgers/swiss-mozz-pickle.jpg"
-        },
-        {
-          "id": "thai-beef",
-          "name": "6. Thai Beef Burger",
-          "description": "Crunchy peanut butter, bacon, green onion and sweet thai chilli sauce",
-          "price": 22.89,
-          "image": "/images/menu/burgers/thai-beef.jpg"
-        },
-        {
-          "id": "breaded-chicken",
-          "name": "7. Breaded Chicken, Bacon, Cheddar & Mozzarella Burger",
-          "description": "Perfection",
-          "price": 27.19,
-          "image": "/images/menu/burgers/breaded-chicken.jpg"
-        },
-        {
-          "id": "teriyaki-chicken",
-          "name": "8. Teriyaki Grilled Chicken, Swiss & Bacon Burger",
-          "description": "It will make you yodel!!",
-          "price": 27.99,
-          "image": "/images/menu/burgers/The_Teryaki_Grilled_Chicken_and_Swiss.webp"
-        },
-        {
-          "id": "mexican-meatless",
-          "name": "9. Mexican Meatless Garden Burger",
-          "description": "With Salsa, Guacamole & Jalapenos",
-          "price": 24.59,
-          "image": "/images/menu/burgers/Mexican_Meatlless.jpg"
-        },
-        {
-          "id": "breakfast-burger",
-          "name": "10. Breakfast Burger, Mozzarella, Fried Egg & Bacon",
-          "description": "Gooood Morningnn!!",
-          "price": 25.09,
-          "image": "/images/menu/burgers/breakfast-burger.jpg"
-        }
-      ]
-    },
-    {
-      "id": "specialty",
-      "name": "To Die For Specialty Burgers",
-      "description": "Premium creations for the adventurous",
-      "items": [
-        {
-          "id": "mile-high",
-          "name": "Ernie's Mile High",
-          "description": "Three pounds of meat. Eight patties high topped with THE WORKS!",
-          "price": 72.69,
-          "featured": true,
-          "image": "/images/menu/burgers/Ernies_Mile_High.jpg"
-        },
-        {
-          "id": "awesome",
-          "name": "Awesome! Awesome! Awesome!",
-          "description": "A pound in a half of meat topped off with THE WORKS.",
-          "price": 45.49,
-          "featured": true,
-          "image": "/images/menu/specialty/awesome.jpg"
-        },
-        {
-          "id": "hulk-burger",
-          "name": "Hulk Burger",
-          "description": "This Two patty burger comes with THE WORKS!",
-          "price": 31.09,
-          "featured": true,
-          "image": "/images/menu/specialty/hulk-burger.jpg"
-        },
-        {
-          "id": "greek-god",
-          "name": "Greek God Burger",
-          "description": "A fresh grade \"A\" lean beef patty topped with green peppers, black olives & feta cheese & tzatziki. Food for the God's indeed!",
-          "price": 24.89,
-          "image": "/images/menu/specialty/greek-god.jpg"
-        },
-        {
-          "id": "insanity",
-          "name": "Insanity Burger",
-          "description": "Our beef burger topped with swiss and bacon between two grilled cheese sandwiches.",
-          "price": 29.99,
-          "image": "/images/menu/specialty/insanity.jpg"
-        },
-        {
-          "id": "chicken-marinara",
-          "name": "Chicken Marinara Burger",
-          "description": "A breaded chicken breast topped with marinara, parmesan and mozzarella.",
-          "price": 27.19,
-          "image": "/images/menu/specialty/chicken-marinara.jpg"
-        },
-        {
-          "id": "hawaiian",
-          "name": "Hawaiian Burger",
-          "description": "A teriyaki burger topped with ham, pineapple ring, lettuce, tomato, onions and mozzarella. Beats poi any day!",
-          "price": 25.89,
-          "image": "/images/menu/specialty/hawaiian.jpg"
-        },
-        {
-          "id": "chicken-cordon-bleu",
-          "name": "Chicken Cordon Bleu Burger",
-          "description": "A tender breast filet, breaded and fried to golden perfection, then topped with ham, melted mozzarella, tomato, lettuce and our special sauce.",
-          "price": 25.89,
-          "image": "/images/menu/burgers/The_Cordon_Blue.webp"
-        },
-        {
-          "id": "spicy-inferno",
-          "name": "The Spicy Inferno",
-          "description": "Our cajun beef patty topped with habanero mango sauce, jack cheese, jalapenos and banana peppers.",
-          "price": 27.19,
-          "image": "/images/menu/burgers/Spicey_Inferno.jpg"
-        },
-        {
-          "id": "greek-goddess-veggie",
-          "name": "Greek Goddess Veggie Burger",
-          "description": "Grilled veggie burger topped off with sundried tomatoes, feta, green peppers and hummus.",
-          "price": 25.29,
-          "image": "/images/menu/specialty/greek-goddess-veggie.jpg"
-        }
-      ]
-    },
-    {
       "id": "salads-soup",
       "name": "Salads / Soup",
       "description": "Fresh and healthy options",
@@ -365,7 +367,7 @@
           "name": "Caesar by Caesar (Dinner Size)",
           "description": "Served with garlic toast and a lemon wedge. Add Chicken: $5.59 · Add Cod: $5.89",
           "price": 13.49,
-          "image": "/images/menu/salads/caesar-dinner.jpg"
+          "image": "/images/menu/salads/Chicken_Ceaser_Salad.jpg"
         },
         {
           "id": "artisan-appy",
@@ -400,7 +402,7 @@
           "name": "Soup (Bowl)",
           "description": "Ask your server for today's selection",
           "price": 7.59,
-          "image": "/images/menu/salads/soup-bowl.jpg"
+          "image": "/images/menu/salads/Bowl_Of_Soup.jpg"
         }
       ]
     },
@@ -414,7 +416,7 @@
           "name": "Vanilla",
           "description": "Classic vanilla milkshake",
           "price": 5.74,
-          "image": "/images/menu/milkshakes/vanilla-shake.jpg"
+          "image": "/images/menu/milkshakes/Vanilla_Milkshake.jpg"
         },
         {
           "id": "chocolate-shake",
@@ -428,7 +430,7 @@
           "name": "Strawberry",
           "description": "Sweet strawberry milkshake",
           "price": 5.74,
-          "image": "/images/menu/milkshakes/strawberry-shake.jpg"
+          "image": "/images/menu/milkshakes/Strawberry_Milkshake.jpg"
         },
         {
           "id": "mint-chocolate-shake",
@@ -673,7 +675,7 @@
           "name": "Boozy Mocha",
           "description": "Kahlua, peppermint & hot chocolate",
           "price": 6.74,
-          "image": "/images/menu/coffees/boozy-mocha.jpg"
+          "image": "/images/menu/coffees/Boozy_Coffee.jpg"
         },
         {
           "id": "monte-cristo",

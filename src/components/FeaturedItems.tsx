@@ -52,6 +52,11 @@ export default function FeaturedItems({ items, showDate = true, showViewMenuButt
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-accent-900/20 to-transparent"></div>
+                  {item.bestSeller && (
+                    <div className="absolute top-3 left-3 bg-gradient-to-r from-yellow-500 to-yellow-400 text-accent-900 px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
+                      BEST SELLER
+                    </div>
+                  )}
                 </div>
               )}
               <div className="p-6">

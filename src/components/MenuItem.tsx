@@ -18,6 +18,11 @@ export default function MenuItem({ item }: MenuItemProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-accent-900/20 to-transparent"></div>
+          {item.bestSeller && (
+            <div className="absolute top-3 left-3 bg-gradient-to-r from-yellow-500 to-yellow-400 text-accent-900 px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
+              BEST SELLER
+            </div>
+          )}
           {item.featured && (
             <div className="absolute top-3 right-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
               FEATURED
