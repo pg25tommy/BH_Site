@@ -40,15 +40,23 @@ export default function MenuPage() {
       <div className="sticky top-20 glass-card z-40" style={{ boxShadow: '0 4px 20px rgba(61, 45, 28, 0.1)' }}>
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex overflow-x-auto py-4 gap-3 scrollbar-hide">
-            {menu.categories.map((category) => (
-              <a
-                key={category.id}
-                href={`#${category.id}`}
-                className="whitespace-nowrap px-5 py-2.5 rounded-full bg-wood-200/50 hover:bg-primary-500 hover:text-white font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-sm"
-              >
-                {category.name}
-              </a>
-            ))}
+            {menu.categories
+              .filter(cat => !['milkshakes', 'fancy-beverages', 'non-alcoholic', 'beer-ciders', 'wine', 'heavenly-coffees', 'boozy-shakes'].includes(cat.id))
+              .map((category) => (
+                <a
+                  key={category.id}
+                  href={`#${category.id}`}
+                  className="whitespace-nowrap px-5 py-2.5 rounded-full bg-wood-200/50 hover:bg-primary-500 hover:text-white font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-sm"
+                >
+                  {category.name}
+                </a>
+              ))}
+            <a
+              href="#milkshakes"
+              className="whitespace-nowrap px-5 py-2.5 rounded-full bg-wood-200/50 hover:bg-primary-500 hover:text-white font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-sm"
+            >
+              Drinks
+            </a>
             <a
               href="#toppings"
               className="whitespace-nowrap px-5 py-2.5 rounded-full bg-wood-200/50 hover:bg-primary-500 hover:text-white font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-sm"

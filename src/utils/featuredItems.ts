@@ -52,8 +52,18 @@ export function getDailyFeaturedItems(
   menuData: MenuData,
   count: number = 4
 ): MenuItem[] {
-  // Collect all items from all categories (excluding kids menu and soups/salads)
-  const excludedCategories = ['kids-seniors', 'salads-soup'];
+  // Collect all items from all categories (excluding kids menu, soups/salads, and all drinks)
+  const excludedCategories = [
+    'kids-seniors',
+    'salads-soup',
+    'milkshakes',
+    'fancy-beverages',
+    'non-alcoholic',
+    'beer-ciders',
+    'wine',
+    'heavenly-coffees',
+    'boozy-shakes'
+  ];
 
   const allItems: MenuItem[] = menuData.categories
     .filter(category => !excludedCategories.includes(category.id))
