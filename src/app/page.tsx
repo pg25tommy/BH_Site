@@ -114,6 +114,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
+            {/* Location Info */}
             {locations.map((location) => (
               <div
                 key={location.id}
@@ -150,6 +151,28 @@ export default function Home() {
                 </a>
               </div>
             ))}
+
+            {/* Reservation Call Ahead */}
+            <div className="relative diner-card rounded-2xl overflow-hidden group">
+              <div className="absolute inset-0">
+                <Image
+                  src="/images/atmosphere/Reserve_2.jpg"
+                  alt="Burger Heaven Restaurant Interior - Reserved Table"
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-accent-900/70 via-accent-900/30 to-accent-900/30"></div>
+              </div>
+              <div className="relative z-10 p-8 h-full flex flex-col justify-end text-center">
+                <h3 className="text-3xl md:text-4xl font-heading text-white mb-6 leading-tight" style={{ textShadow: '0 3px 20px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.5)' }}>
+                  CALL AHEAD, WE&apos;LL ALWAYS HAVE A TABLE READY FOR YOU
+                </h3>
+                <p className="text-lg text-white font-semibold" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.5)' }}>
+                  Planning a visit? Give us a call and we&apos;ll make sure your table is waiting.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
