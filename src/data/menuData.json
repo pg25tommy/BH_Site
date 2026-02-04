@@ -255,7 +255,7 @@
           "description": "This Two patty burger comes with THE WORKS!",
           "price": 31.09,
           "featured": true,
-          "image": "/images/menu/specialty/Hullk_Burger.webp"
+          "image": "/images/menu/burgers/Hullk_Burger.webp"
         },
         {
           "id": "greek-god",
@@ -269,7 +269,7 @@
           "name": "Insanity Burger",
           "description": "Our beef burger topped with swiss and bacon between two grilled cheese sandwiches.",
           "price": 29.99,
-          "image": "/images/menu/specialty/Insanity_Burger.webp"
+          "image": "/images/menu/burgers/Insanity_Burger.webp"
         },
         {
           "id": "chicken-marinara",
@@ -402,7 +402,7 @@
           "name": "Soup (Bowl)",
           "description": "Ask your server for today's selection",
           "price": 7.59,
-          "image": "/images/menu/salads/Bowl_Of_Soup.jpg"
+          "image": "/images/menu/appetizers/Bowl_Of_Soup.jpg"
         }
       ]
     },
