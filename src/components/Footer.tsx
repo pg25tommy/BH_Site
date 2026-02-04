@@ -1,8 +1,50 @@
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage(null);
+
+    try {
+      const response = await fetch('https://bh-email.vercel.app/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          firstName: firstName.trim(),
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.status === 201 && data.success) {
+        setMessage({ type: 'success', text: 'Successfully subscribed! Check your email for exclusive deals.' });
+        setEmail('');
+        setFirstName('');
+      } else if (response.status === 409) {
+        setMessage({ type: 'error', text: data.error || 'You are already subscribed!' });
+      } else {
+        setMessage({ type: 'error', text: data.error || 'Something went wrong. Please try again.' });
+      }
+    } catch (error) {
+      setMessage({ type: 'error', text: 'Network error. Please check your connection and try again.' });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -85,22 +127,47 @@ export default function Footer() {
                 <FaTiktok className="h-6 w-6" />
               </a>
             </div>
-            <p className="text-gray-400 text-sm mb-2">
+            <p className="text-gray-400 text-sm mb-3">
               Subscribe to our newsletter for exclusive deals
             </p>
-            <form className="flex gap-2">
+            <form onSubmit={handleSubmit} className="space-y-2">
+              <input
+                type="text"
+                placeholder="First name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+                disabled={loading}
+                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-500 disabled:opacity-50"
+              />
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={loading}
+                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-500 disabled:opacity-50"
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-accent-500 hover:bg-accent-600 rounded-md text-sm font-semibold transition-colors"
+                disabled={loading}
+                className="w-full px-4 py-2 bg-accent-500 hover:bg-accent-600 rounded-md text-sm font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {loading ? 'Subscribing...' : 'Subscribe'}
               </button>
             </form>
+            {message && (
+              <div
+                className={`mt-3 p-2 rounded-md text-sm ${
+                  message.type === 'success'
+                    ? 'bg-green-900/50 text-green-200 border border-green-700'
+                    : 'bg-red-900/50 text-red-200 border border-red-700'
+                }`}
+              >
+                {message.text}
+              </div>
+            )}
           </div>
         </div>
 
