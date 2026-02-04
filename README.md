@@ -8,6 +8,7 @@ Burger Heaven is a local burger restaurant serving New Westminster with premium 
 
 ## Features
 
+### User Experience
 - **Responsive Design**: Fully responsive layout optimized for mobile, tablet, and desktop
 - **Wood-Panel Theme**: Custom retro diner aesthetic with warm wood tones and vibrant accents
 - **Daily Featured Items**: Rotating featured menu items that change daily
@@ -15,7 +16,20 @@ Burger Heaven is a local burger restaurant serving New Westminster with premium 
 - **Interactive Menu**: Browse the full menu with detailed descriptions and pricing
 - **Gallery**: Photo gallery showcasing food and restaurant atmosphere
 - **Mile High Challenge**: Dedicated page for the famous Mile High burger challenge
-- **Location Information**: Complete address, hours, and contact details
+- **Location Information**: Complete address, hours, and contact details with embedded Google Maps
+
+### Contact & Applications
+- **Contact Form**: Secure contact form with email notifications
+- **Job Applications**: Online career application system with PDF resume upload
+- **Email Notifications**: Automated email delivery via Resend API with structured formatting
+
+### Security Features
+- **Input Validation**: Comprehensive validation for all form inputs (email, phone, text length)
+- **XSS Protection**: HTML escaping on all user-generated content
+- **File Upload Security**: Server-side PDF validation using magic bytes verification
+- **Security Headers**: Enterprise-grade HTTP security headers including CSP, HSTS, X-Frame-Options
+- **Path Traversal Protection**: Sanitized filenames to prevent directory traversal attacks
+- **Environment Variables**: Secure configuration management for API keys and sensitive data
 
 ## Pages
 
@@ -43,9 +57,26 @@ Burger Heaven is a local burger restaurant serving New Westminster with premium 
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Icons**: Heroicons
+- **Email Service**: Resend API for transactional emails
+- **Maps**: Google Maps API integration
+- **Security**: Custom validation and sanitization utilities
 - **Deployment**: Vercel-ready
 
 ## Getting Started
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```env
+RESEND_API_KEY=your_resend_api_key_here
+CONTACT_EMAIL=your_contact_email@example.com
+```
+
+- **RESEND_API_KEY**: API key from [Resend](https://resend.com) for sending emails
+- **CONTACT_EMAIL**: Email address where contact form and job applications will be sent
+
+### Installation
 
 First, install the dependencies:
 
@@ -76,6 +107,9 @@ burger-heaven-site/
 ├── src/
 │   ├── app/              # Next.js App Router pages
 │   │   ├── about/
+│   │   ├── api/          # API routes
+│   │   │   ├── apply/    # Job application endpoint
+│   │   │   └── contact/  # Contact form endpoint
 │   │   ├── careers/
 │   │   ├── contact/
 │   │   ├── gallery/
@@ -96,6 +130,7 @@ burger-heaven-site/
 │   │   └── menuData.json
 │   ├── types/           # TypeScript type definitions
 │   └── utils/           # Utility functions
+│       └── security.ts  # Security validation & sanitization
 └── public/              # Static assets
 ```
 

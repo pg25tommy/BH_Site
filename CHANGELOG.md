@@ -7,6 +7,78 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added - 2026-02-03
+
+#### Security Enhancements
+- **Security Utilities Module** (`src/utils/security.ts`)
+  - HTML escaping function to prevent XSS attacks
+  - Email format validation (RFC-compliant with 254 char limit)
+  - Phone number validation (10-20 characters, standard formats)
+  - String length validation for all text inputs
+  - Filename sanitization to prevent path traversal attacks
+  - PDF magic bytes validation (%PDF- header check)
+
+- **Security Headers** (`next.config.ts`)
+  - Content-Security-Policy (CSP) with Google Maps support
+  - X-Content-Type-Options (nosniff)
+  - X-Frame-Options (DENY)
+  - X-XSS-Protection
+  - Strict-Transport-Security (HSTS)
+  - Referrer-Policy
+  - Permissions-Policy
+
+#### Job Application Features
+- **PDF Resume Upload** (`src/app/careers/page.tsx`)
+  - Optional PDF resume attachment for job applications
+  - Client-side validation (MIME type, 5MB size limit)
+  - Server-side PDF validation using magic bytes
+  - File display with name and size preview
+  - Base64 encoding for email delivery via Resend API
+
+### Changed - 2026-02-03
+
+#### Menu Organization
+- **Top 10 Reordering** - Moved "Your Top 10!" to first position in menu
+- **Featured Items Reduced** - Changed from 6 to 4 featured items on home page
+- **Best Seller Badges** - Added "BEST SELLER" badges to featured menu items
+- **Menu Navigation** - Simplified jump bar and reordered sections
+- **Drinks Consolidation** - All beverage categories excluded from featured rotation
+- **Toppings Repositioned** - Moved after "Create Your Own" section for better UX
+
+#### Email Communication
+- **Contact Form Subject Lines** (`src/app/api/contact/route.ts`)
+  - Changed format to: `[Subject Category] - [Name]`
+  - Enables quick urgency identification in inbox
+  - Examples: "Catering Inquiry - John Smith", "Complaint - Jane Doe"
+
+- **Application Email Subject Lines** (`src/app/api/apply/route.ts`)
+  - Changed format to: `[Position] - [First Name Last Name]`
+  - Enables quick position filtering and candidate identification
+  - Examples: "Line Cook - John Smith", "Server - Jane Doe"
+
+#### Security Improvements
+- **XSS Protection** - All user input escaped in email templates
+- **Input Validation** - Comprehensive validation on all form fields
+  - Name fields: 50-100 character limits
+  - Position: 100 character limit
+  - Subject: 200 character limit
+  - Messages: 5000 character limit
+  - Email format validation
+  - Phone format validation
+- **File Upload Security**
+  - Server-side PDF validation (not just MIME type)
+  - Filename sanitization (removes path separators, null bytes)
+  - 5MB file size limit enforced server-side
+- **Error Handling** - Removed sensitive error details from API responses
+- **Debug Cleanup** - Removed all console.log debug statements
+- **Environment Variables** - Moved recipient email to CONTACT_EMAIL env var
+
+### Fixed - 2026-02-03
+- **TypeScript Build Error** - Fixed validateLength return type to explicitly return boolean
+- **CSP Blocking Maps** - Added Google Maps exceptions to Content-Security-Policy
+- **CSP Blocking Next.js** - Added WebSocket and hot reload support to CSP
+- **Navigation Breaking** - Fixed security headers preventing site navigation
+
 ### Changed - 2026-01-31
 
 #### Modern Design Refinement (Latest Update)
