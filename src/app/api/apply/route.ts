@@ -8,8 +8,14 @@ export async function POST(request: Request) {
     // Debug: Check if API key is loaded
     console.log('API Key loaded:', process.env.RESEND_API_KEY ? 'Yes' : 'No');
 
-    const body = await request.json();
-    const { firstName, lastName, email, phone, position, experience } = body;
+    const formData = await request.formData();
+    const firstName = formData.get('firstName') as string;
+    const lastName = formData.get('lastName') as string;
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    const position = formData.get('position') as string;
+    const experience = formData.get('experience') as string;
+    const resumeFile = formData.get('resume') as File | null;
 
     // Validate required fields
     if (!firstName || !lastName || !email || !phone || !position || !experience) {
@@ -21,8 +27,19 @@ export async function POST(request: Request) {
 
     console.log('Attempting to send application email to:', 'tommy@knocktwice.ca');
 
+    // Prepare attachments if resume is provided
+    const attachments = [];
+    if (resumeFile && resumeFile.size > 0) {
+      const buffer = await resumeFile.arrayBuffer();
+      const base64 = Buffer.from(buffer).toString('base64');
+      attachments.push({
+        filename: resumeFile.name,
+        content: base64,
+      });
+    }
+
     // Send email using Resend
-    const { data, error } = await resend.emails.send({
+    const emailOptions: any = {
       from: 'Burger Heaven Careers <onboarding@resend.dev>', // This will be updated once domain is verified
       to: ['tommy@knocktwice.ca'], // Temporarily using verified email for testing
       subject: `${position} - ${firstName} ${lastName}`,
@@ -47,12 +64,19 @@ export async function POST(request: Request) {
 
           <div style="margin-top: 20px; padding: 15px; background-color: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 4px;">
             <p style="margin: 0; font-size: 14px; color: #92400e;">
-              <strong>Note:</strong> Please respond to the applicant at ${email}
+              <strong>Note:</strong> Please respond to the applicant at ${email}${resumeFile ? ' | Resume attached' : ''}
             </p>
           </div>
         </div>
       `,
-    });
+    };
+
+    // Add attachments if resume is provided
+    if (attachments.length > 0) {
+      emailOptions.attachments = attachments;
+    }
+
+    const { data, error } = await resend.emails.send(emailOptions);
 
     if (error) {
       console.error('Resend error:', JSON.stringify(error, null, 2));

@@ -12,6 +12,7 @@ export default function CareersPage() {
     experience: '',
     authorized: false,
   });
+  const [resume, setResume] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: 'success' | 'error' | null;
@@ -38,12 +39,22 @@ export default function CareersPage() {
     setSubmitStatus({ type: null, message: '' });
 
     try {
+      // Create FormData to handle file upload
+      const formDataToSend = new FormData();
+      formDataToSend.append('firstName', formData.firstName);
+      formDataToSend.append('lastName', formData.lastName);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('position', formData.position);
+      formDataToSend.append('experience', formData.experience);
+
+      if (resume) {
+        formDataToSend.append('resume', resume);
+      }
+
       const response = await fetch('/api/apply', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: formDataToSend,
       });
 
       const data = await response.json();
@@ -63,6 +74,10 @@ export default function CareersPage() {
           experience: '',
           authorized: false,
         });
+        setResume(null);
+        // Reset file input
+        const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+        if (fileInput) fileInput.value = '';
       } else {
         setSubmitStatus({
           type: 'error',
@@ -87,6 +102,32 @@ export default function CareersPage() {
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value,
     }));
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      // Validate that it's a PDF
+      if (file.type !== 'application/pdf') {
+        setSubmitStatus({
+          type: 'error',
+          message: 'Please upload a PDF file only.',
+        });
+        e.target.value = '';
+        return;
+      }
+      // Validate file size (max 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        setSubmitStatus({
+          type: 'error',
+          message: 'Resume file size must be less than 5MB.',
+        });
+        e.target.value = '';
+        return;
+      }
+      setResume(file);
+      setSubmitStatus({ type: null, message: '' });
+    }
   };
 
   return (
@@ -263,6 +304,22 @@ export default function CareersPage() {
                 className="w-full px-5 py-3 border-2 border-wood-300 rounded-2xl bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                 required
               ></textarea>
+              <div>
+                <label className="block text-sm font-semibold text-accent-900 mb-2">
+                  Resume (PDF only, max 5MB) - Optional
+                </label>
+                <input
+                  type="file"
+                  accept=".pdf,application/pdf"
+                  onChange={handleFileChange}
+                  className="w-full px-5 py-3 border-2 border-wood-300 rounded-2xl bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100"
+                />
+                {resume && (
+                  <p className="mt-2 text-sm text-green-700 font-semibold">
+                    ✓ {resume.name} ({(resume.size / 1024).toFixed(1)} KB)
+                  </p>
+                )}
+              </div>
               <div className="text-sm text-accent-800">
                 <label className="flex items-start gap-2">
                   <input
