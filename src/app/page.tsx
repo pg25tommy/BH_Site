@@ -176,6 +176,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Newsletter Signup Section */}
+      <section className="section-padding bg-gradient-to-br from-accent-600 via-accent-500 to-primary-500 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
+        </div>
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative text-center">
+          <h2 className="text-4xl md:text-5xl font-heading mb-4" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>
+            JOIN THE BURGER INSIDERS
+          </h2>
+          <p className="text-xl md:text-2xl mb-8 font-light">
+            Get exclusive deals, insider news, and special offers delivered straight to your inbox
+          </p>
+          <Link
+            href="/burger-insiders"
+            className="inline-block glass-card text-accent-900 font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-xl"
+          >
+            Sign Up Now
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

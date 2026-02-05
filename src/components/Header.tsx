@@ -16,6 +16,7 @@ export default function Header() {
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Burger Insiders', href: '/burger-insiders' },
     { name: 'Reviews', href: '/reviews' },
   ];
 

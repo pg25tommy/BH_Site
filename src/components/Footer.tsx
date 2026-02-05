@@ -84,6 +84,11 @@ export default function Footer() {
                   Careers
                 </Link>
               </li>
+              <li>
+                <Link href="/burger-insiders" className="text-gray-400 hover:text-accent-400 transition-colors">
+                  Burger Insiders
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -168,6 +173,11 @@ export default function Footer() {
                 {message.text}
               </div>
             )}
+            <p className="text-gray-500 text-xs mt-3 text-center">
+              <Link href="/burger-insiders" className="hover:text-accent-400 transition-colors">
+                Learn more about Burger Insiders
+              </Link>
+            </p>
           </div>
         </div>
 
