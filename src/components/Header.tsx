@@ -10,7 +10,6 @@ export default function Header() {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Menu', href: '/menu' },
-    { name: 'Gallery', href: '/gallery' },
     { name: 'Mile High Club', href: '/mile-high-club' },
     { name: 'Locations', href: '/locations' },
     { name: 'About', href: '/about' },
@@ -22,24 +21,24 @@ export default function Header() {
 
   return (
     <header className="wood-panel sticky top-0 z-50 backdrop-blur-lg bg-opacity-95" style={{ boxShadow: '0 4px 20px rgba(61, 45, 28, 0.15)' }}>
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex h-20 items-center justify-between">
+      <nav className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
+        <div className="flex h-20 items-center gap-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex items-center group">
-              <span className="text-3xl md:text-4xl font-heading text-primary-600 transition-all duration-300 group-hover:text-primary-500" style={{ textShadow: '0 2px 8px rgba(234, 88, 12, 0.25)' }}>
+              <span className="text-2xl font-heading text-primary-600 transition-all duration-300 group-hover:text-primary-500" style={{ textShadow: '0 2px 8px rgba(234, 88, 12, 0.25)' }}>
                 BURGER HEAVEN
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:gap-x-4 relative">
+          <div className="hidden xl:flex xl:items-center xl:gap-x-3 relative">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold text-wood-900 hover:text-primary-600 transition-all duration-200 relative group px-1.5 py-1"
+                className="text-xs font-semibold text-wood-900 hover:text-primary-600 transition-all duration-200 relative group px-1 py-1 whitespace-nowrap"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
@@ -49,14 +48,14 @@ export default function Header() {
               href="https://www.skipthedishes.com/burger-heaven-new-westminster"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary relative ml-2 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="btn-primary relative ml-2 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 px-4 py-2 text-xs font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 whitespace-nowrap"
             >
               <span className="relative z-10">Order Online - Skip the Dishes</span>
             </a>
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex lg:hidden relative">
+          <div className="flex xl:hidden relative ml-auto">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-wood-900 hover:bg-wood-200/50 transition-colors"
@@ -77,7 +76,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden glass-card border-t border-accent-600/30 animate-fade-in-up">
+        <div className="xl:hidden glass-card border-t border-accent-600/30 animate-fade-in-up">
           <div className="space-y-1 px-4 pb-4 pt-3">
             {navigation.map((item) => (
               <Link

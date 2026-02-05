@@ -138,7 +138,7 @@ export default function ContactPage() {
               {/* Social Media */}
               <div className="diner-card rounded-2xl p-6">
                 <h3 className="font-bold text-lg mb-4 text-accent-900">Follow Us</h3>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 mb-6">
                   <a
                     href="https://www.instagram.com/burgerheavennewwest/"
                     target="_blank"
@@ -155,6 +155,12 @@ export default function ContactPage() {
                   >
                     TikTok
                   </a>
+                </div>
+                <div className="border-t border-wood-200 pt-4">
+                  <h4 className="font-bold text-md mb-2 text-primary-700">Share Your Experience</h4>
+                  <p className="text-accent-800">
+                    Tag us <span className="font-bold text-primary-600">@burgerheavennewwest</span> or use <span className="font-bold text-primary-600">#BurgerHeaven</span> to be featured!
+                  </p>
                 </div>
               </div>
             </div>
