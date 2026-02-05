@@ -1,11 +1,23 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
+import { CheckCircleIcon, TrophyIcon } from '@heroicons/react/24/solid';
 
 export const metadata: Metadata = {
   title: 'Mile High Club Challenge | Burger Heaven',
   description: 'Think you can finish Ernie\'s Mile High Burger? Take the challenge and join the exclusive Mile High Club!',
 };
+
+const winners = [
+  { id: 1, image: '/images/atmosphere/Ernies_1st.jpg', place: '1st' },
+  { id: 2, image: '/images/atmosphere/Ernies_2nd.jpg', place: '2nd' },
+  { id: 3, image: '/images/atmosphere/Ernies_3rd.jpg', place: '3rd' },
+  { id: 4, image: '/images/atmosphere/Ernies_4th.jpg', place: '4th' },
+  { id: 5, image: '/images/atmosphere/Ernies_5th.jpg', place: '5th' },
+  { id: 6, image: '/images/atmosphere/Ernies_6th.jpg', place: '6th' },
+  { id: 7, image: '/images/atmosphere/Ernies_7th.jpg', place: '7th' },
+  { id: 8, image: '/images/atmosphere/Ernies_8th.jpg', place: '8th' },
+];
 
 export default function MileHighClubPage() {
   return (
@@ -42,9 +54,29 @@ export default function MileHighClubPage() {
               These brave souls have conquered the Mile High Challenge
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                <div key={i} className="aspect-square bg-wood-300 rounded-2xl flex items-center justify-center border-2 border-wood-400 hover:scale-105 transition-transform duration-300">
-                  <span className="text-accent-700 text-sm font-semibold">Winner #{i}</span>
+              {winners.map((winner) => (
+                <div
+                  key={winner.id}
+                  className="relative aspect-square rounded-2xl overflow-hidden border-2 border-wood-400 hover:scale-105 transition-all duration-300 hover:shadow-xl group"
+                >
+                  <Image
+                    src={winner.image}
+                    alt={`Mile High Challenge Winner - ${winner.place} Place`}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                  {winner.id === 1 && (
+                    <div className="absolute top-2 right-2 z-10">
+                      <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 text-white px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1 font-bold text-xs animate-pulse">
+                        <TrophyIcon className="w-4 h-4" />
+                        1ST PLACE
+                      </div>
+                    </div>
+                  )}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
+                    <span className="text-white font-semibold text-sm">{winner.place} Place Winner</span>
+                  </div>
                 </div>
               ))}
             </div>
