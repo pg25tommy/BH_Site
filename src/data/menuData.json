@@ -224,7 +224,7 @@
           "name": "Heaven Sent Cod Burger",
           "description": "With lettuce, tomato, red onions and our house made tartar sauce, beer battered, grilled or cajun. Choose your bun: Sesame or Multigrain · Gluten free .80. Add your choice of sauce: Teriyaki, BBQ, Cajun, Habanero Mango, Crunchy Peanut Butter (n/c)",
           "price": 20.89,
-          "image": "/images/menu/burgers/cod-burger.jpg"
+          "image": "/images/menu/burgers/Grilled_Cod_Burger.jpg"
         }
       ]
     },
@@ -262,7 +262,7 @@
           "name": "Greek God Burger",
           "description": "A fresh grade \"A\" lean beef patty topped with green peppers, black olives & feta cheese & tzatziki. Food for the God's indeed!",
           "price": 24.89,
-          "image": "/images/menu/specialty/greek-god.jpg"
+          "image": "/images/menu/burgers/Greek_God_Burger.jpg"
         },
         {
           "id": "insanity",
@@ -283,7 +283,7 @@
           "name": "Hawaiian Burger",
           "description": "A teriyaki burger topped with ham, pineapple ring, lettuce, tomato, onions and mozzarella. Beats poi any day!",
           "price": 25.89,
-          "image": "/images/menu/specialty/hawaiian.jpg"
+          "image": "/images/menu/burgers/Hawaiiawn_Burger.jpg"
         },
         {
           "id": "chicken-cordon-bleu",
@@ -598,7 +598,7 @@
           "name": "Domestic Bottles (341 ml.)",
           "description": "Sleemans Honey Brown, Budweiser, Canadian, Coors Light, Kokanee, MGD",
           "price": 6.39,
-          "image": "/images/menu/beer-ciders/domestic-bottles.jpg"
+          "image": "/images/menu/beer-ciders/Beer_Selection.jpg"
         },
         {
           "id": "import-bottles",
@@ -717,28 +717,28 @@
           "name": "Baileys Milkshake",
           "description": "Baileys milkshake - enjoy as a vanilla shake or create your own favourite",
           "price": 8.74,
-          "image": "/images/menu/boozy-shakes/baileys-shake.jpg"
+          "image": "/images/menu/milkshakes/Boozy_Shake_Baileys.jpg"
         },
         {
           "id": "kahlua-shake",
           "name": "Kahlua Milkshake",
           "description": "Kahlua milkshake - enjoy as a vanilla shake or create your own favourite",
           "price": 8.74,
-          "image": "/images/menu/boozy-shakes/kahlua-shake.jpg"
+          "image": "/images/menu/milkshakes/Boozy_Shake_Kulua.jpg"
         },
         {
           "id": "frangelico-shake",
           "name": "Frangelico Milkshake",
           "description": "Frangelico milkshake - enjoy as a vanilla shake or create your own favourite",
           "price": 8.74,
-          "image": "/images/menu/boozy-shakes/frangelico-shake.jpg"
+          "image": "/images/menu/milkshakes/Boozy_Shake_Frangelico.jpg"
         },
         {
           "id": "grand-marnier-shake",
           "name": "Grand Marnier Milkshake",
           "description": "Grand Marnier milkshake - enjoy as a vanilla shake or create your own favourite",
           "price": 8.74,
-          "image": "/images/menu/boozy-shakes/grand-marnier-shake.jpg"
+          "image": "/images/menu/milkshakes/Boozy_Shake_grandmarinea.jpg"
         }
       ]
     }
