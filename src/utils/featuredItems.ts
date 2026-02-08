@@ -53,7 +53,7 @@ export function getDailyFeaturedItems(
   count: number = 4
 ): MenuItem[] {
   // Collect all items from all categories (excluding kids menu, soups/salads, and all drinks)
-  const excludedCategories = [
+  const excludedCategoryIds = [
     'kids-seniors',
     'salads-soup',
     'milkshakes',
@@ -65,8 +65,16 @@ export function getDailyFeaturedItems(
     'boozy-shakes'
   ];
 
+  const excludedNamePatterns = [
+    /shake/i, /beverage/i, /beer/i, /cider/i, /wine/i, /coffee/i,
+    /lemonade/i, /kid/i, /angel/i, /senior/i, /salad/i, /soup/i,
+  ];
+
   const allItems: MenuItem[] = menuData.categories
-    .filter(category => !excludedCategories.includes(category.id))
+    .filter(category =>
+      !excludedCategoryIds.includes(category.id) &&
+      !excludedNamePatterns.some(pattern => pattern.test(category.name))
+    )
     .flatMap(category => category.items);
 
   // Get today's seed

@@ -1,18 +1,19 @@
 export interface MenuItem {
   id: string;
   name: string;
-  description: string;
+  description: string | null;
   price: number;
-  image?: string;
+  image?: string | null;
   featured?: boolean;
   bestSeller?: boolean;
+  soldOut?: boolean;
   available?: boolean;
 }
 
 export interface MenuCategory {
   id: string;
   name: string;
-  description: string;
+  description: string | null;
   items: MenuItem[];
 }
 

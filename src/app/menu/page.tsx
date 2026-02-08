@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
 import MenuCategory from '@/components/MenuCategory';
 import FeaturedItems from '@/components/FeaturedItems';
-import menuData from '@/data/menuData.json';
-import { MenuData, Topping } from '@/types/menu';
+import { getMenuData } from '@/lib/menu';
+import { Topping } from '@/types/menu';
 import { getDailyFeaturedItems } from '@/utils/featuredItems';
-
-const menu = menuData as MenuData;
 
 export const metadata: Metadata = {
   title: 'Menu | Burger Heaven - Authentic Canadian Burgers | Local New Westminster BC',
@@ -13,7 +11,8 @@ export const metadata: Metadata = {
   keywords: 'Canadian burger menu, local burger restaurant menu, New Westminster food menu, authentic Canadian burgers, locally sourced burgers, BC burger menu, Canadian beef burgers, local ingredients menu, New West burger menu',
 };
 
-export default function MenuPage() {
+export default async function MenuPage() {
+  const menu = await getMenuData();
   const featuredItems = getDailyFeaturedItems(menu, 4);
 
   return (
@@ -87,7 +86,7 @@ export default function MenuPage() {
             <MenuCategory category={category} />
 
             {/* Toppings Section - Show after Create Your Own category */}
-            {category.id === 'create-your-own' && (
+            {category.id === 'create-your-own' && menu.toppings && menu.toppings.length > 0 && (
               <section id="toppings" className="mb-16 scroll-mt-24">
                 <div className="mb-10">
                   <h2 className="text-4xl font-heading text-primary-700 mb-3">

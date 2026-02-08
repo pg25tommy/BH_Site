@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import FeaturedItems from '@/components/FeaturedItems';
-import menuData from '@/data/menuData.json';
+import { getMenuData } from '@/lib/menu';
 import locationsData from '@/data/locations.json';
-import { MenuData, Location } from '@/types/menu';
+import { Location } from '@/types/menu';
 import { getDailyFeaturedItems } from '@/utils/featuredItems';
 
-const menu = menuData as MenuData;
 const locations = locationsData.locations as Location[];
 
-export default function Home() {
+export default async function Home() {
+  const menu = await getMenuData();
   const featuredItems = getDailyFeaturedItems(menu, 4);
 
   return (
