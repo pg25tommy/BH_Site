@@ -1,6 +1,6 @@
 import { MenuData } from '@/types/menu';
 
-const MENU_API_URL = process.env.NEXT_PUBLIC_MENU_API_URL || 'http://localhost:3003/api/menu';
+const MENU_API_URL = process.env.NEXT_PUBLIC_MENU_API_URL || 'https://bh-email.vercel.app/api/menu';
 
 export async function getMenuData(): Promise<MenuData> {
   try {
