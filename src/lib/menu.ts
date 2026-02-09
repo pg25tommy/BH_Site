@@ -5,7 +5,7 @@ const MENU_API_URL = process.env.NEXT_PUBLIC_MENU_API_URL || 'https://bh-email.v
 export async function getMenuData(): Promise<MenuData> {
   try {
     const response = await fetch(MENU_API_URL, {
-      next: { revalidate: 60 },
+      cache: 'no-store',
       headers: {
         'Content-Type': 'application/json',
       },
