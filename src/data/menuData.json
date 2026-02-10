@@ -41,7 +41,7 @@
           "name": "5. Swiss, Mozzarella & Pickle Burger",
           "description": "A cheese lover's dream, with a zing",
           "price": 23.19,
-          "image": "/images/menu/burgers/swiss-mozz-pickle.jpg"
+          "image": "/images/menu/burgers/Swiss_mozza_pickle_Burger.jpg"
         },
         {
           "id": "thai-beef",
@@ -224,7 +224,7 @@
           "name": "Heaven Sent Cod Burger",
           "description": "With lettuce, tomato, red onions and our house made tartar sauce, beer battered, grilled or cajun. Choose your bun: Sesame or Multigrain · Gluten free .80. Add your choice of sauce: Teriyaki, BBQ, Cajun, Habanero Mango, Crunchy Peanut Butter (n/c)",
           "price": 20.89,
-          "image": "/images/menu/burgers/Grilled_Cod_Burger.jpg"
+          "image": "/images/menu/burgers/Battered_Cod_Burger.jpg"
         }
       ]
     },
@@ -521,7 +521,7 @@
           "name": "\"Bottomless\" Heavenly Coffee",
           "description": "Unlimited refills with a meal. Leaded and Unleaded.",
           "price": 3.24,
-          "image": "/images/menu/beverages/coffee.jpg"
+          "image": "/images/menu/coffees/Coffee.jpg"
         },
         {
           "id": "juice",
@@ -549,7 +549,7 @@
           "name": "Tea",
           "description": "Hot tea",
           "price": 3.24,
-          "image": "/images/menu/beverages/tea.jpg"
+          "image": "/images/menu/coffees/Tea.jpg"
         },
         {
           "id": "hot-chocolate",
@@ -598,14 +598,14 @@
           "name": "Domestic Bottles (341 ml.)",
           "description": "Sleemans Honey Brown, Budweiser, Canadian, Coors Light, Kokanee, MGD",
           "price": 6.39,
-          "image": "/images/menu/beer-ciders/Beer_Selection.jpg"
+          "image": "/images/menu/beer-ciders/Domestic_beer.jpg"
         },
         {
           "id": "import-bottles",
           "name": "Import Bottles (330 ml.)",
           "description": "Heineken, Corona, Stella, Guiness",
           "price": 6.99,
-          "image": "/images/menu/beer-ciders/import-bottles.jpg"
+          "image": "/images/menu/beer-ciders/Import_Beer_Selection.jpg"
         },
         {
           "id": "ciders",
