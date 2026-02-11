@@ -28,6 +28,20 @@ export interface MenuData {
   toppings: Topping[];
 }
 
+export interface FeaturedItem {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
+
+export interface WeeklyFeatured {
+  burger: FeaturedItem;
+  sandwich: FeaturedItem;
+  weekOf: string;
+}
+
 export interface Location {
   id: string;
   name: string;

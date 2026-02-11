@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 import MenuCategory from '@/components/MenuCategory';
-import FeaturedItems from '@/components/FeaturedItems';
+import WeeklyChalkboard from '@/components/WeeklyChalkboard';
 import { getMenuData } from '@/lib/menu';
+import { getWeeklyFeatured } from '@/lib/featured';
 import { Topping } from '@/types/menu';
-import { getDailyFeaturedItems } from '@/utils/featuredItems';
 
 export const metadata: Metadata = {
   title: 'Menu | Burger Heaven - Authentic Canadian Burgers | Local New Westminster BC',
@@ -12,8 +12,10 @@ export const metadata: Metadata = {
 };
 
 export default async function MenuPage() {
-  const menu = await getMenuData();
-  const featuredItems = getDailyFeaturedItems(menu, 4);
+  const [menu, weeklyFeatured] = await Promise.all([
+    getMenuData(),
+    getWeeklyFeatured(),
+  ]);
 
   return (
     <div className="bg-wood-100 min-h-screen">
@@ -43,9 +45,9 @@ export default async function MenuPage() {
         </div>
       </section>
 
-      {/* Daily Featured Items */}
+      {/* Weekly Featured Chalkboard */}
       <div id="menu-content">
-        <FeaturedItems items={featuredItems} showDate={false} showViewMenuButton={false} />
+        <WeeklyChalkboard featured={weeklyFeatured} showViewMenuButton={false} />
       </div>
 
       {/* Quick Navigation */}
