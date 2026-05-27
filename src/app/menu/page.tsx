@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import MenuCategory from '@/components/MenuCategory';
-import WeeklyChalkboard from '@/components/WeeklyChalkboard';
 import { getMenuData } from '@/lib/menu';
-import { getWeeklyFeatured } from '@/lib/featured';
 import { Topping } from '@/types/menu';
 
 export const metadata: Metadata = {
@@ -12,10 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function MenuPage() {
-  const [menu, weeklyFeatured] = await Promise.all([
-    getMenuData(),
-    getWeeklyFeatured(),
-  ]);
+  const menu = await getMenuData();
 
   return (
     <div className="bg-wood-100 min-h-screen">
@@ -45,9 +40,7 @@ export default async function MenuPage() {
         </div>
       </section>
 
-      {/* Weekly Featured Chalkboard */}
       <div id="menu-content">
-        <WeeklyChalkboard featured={weeklyFeatured} showViewMenuButton={false} />
       </div>
 
       {/* Quick Navigation */}

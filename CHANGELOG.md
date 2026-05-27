@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Removed - 2026-05-27
+
+#### Weekly Chalkboard Feature
+- **Removed Weekly Featured Chalkboard Component**
+  - Eliminated dependency on external admin panel API for featured items
+  - Simplified architecture by removing `WeeklyChalkboard` component
+  - Removed `getWeeklyFeatured()` API calls from home and menu pages
+  - Menu items still display featured/best seller badges as designed
+  - No more API connection errors for weekly featured items
+
 ### Changed - 2026-05-27
 
 #### Image Optimization & Performance

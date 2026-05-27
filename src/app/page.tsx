@@ -1,15 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import WeeklyChalkboard from '@/components/WeeklyChalkboard';
-import { getWeeklyFeatured } from '@/lib/featured';
 import locationsData from '@/data/locations.json';
 import { Location } from '@/types/menu';
 
 const locations = locationsData.locations as Location[];
 
-export default async function Home() {
-  const weeklyFeatured = await getWeeklyFeatured();
-
+export default function Home() {
   return (
     <div>
       {/* Hero Section */}
@@ -63,9 +59,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
-      {/* Weekly Featured Chalkboard */}
-      <WeeklyChalkboard featured={weeklyFeatured} />
 
       {/* Mile High Challenge Section */}
       <section className="section-padding bg-gradient-to-br from-primary-700 via-primary-600 to-primary-500 text-wood-50 relative overflow-hidden">
