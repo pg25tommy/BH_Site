@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed - 2026-05-27
+
+#### Image Optimization & Performance
+- **Optimized All Hero and Featured Images**
+  - Compressed Mile High Challenge winner photos (Ernies_1st.jpg through Ernies_8th.jpg)
+    - Reduced from 3.6-4.2 MB each to 220-264 KB each (~94% reduction)
+  - Optimized hero images (Outside_Hero.jpg, Inside_Hero.jpg, Bill_Hero.jpg)
+    - Reduced from 800KB-1.4MB to 112-180KB each (~88% reduction)
+  - Total size savings: ~65 MB across all optimized images
+  - Resized images to max 1200px width (optimal for retina displays)
+  - Applied 80% JPEG compression with progressive encoding
+  - **Performance Impact**:
+    - Mile High Club page load reduced by ~28 MB
+    - Expected LCP improvement from ~4s to <1s
+    - Significant mobile performance gains on cellular connections
+
+- **Image Optimization Tooling**
+  - Created automated image optimization script (`optimize-images.js`)
+  - Uses Sharp library for high-quality image compression
+  - Configurable settings (max width, quality, file size threshold)
+  - Batch processing with progress reporting and statistics
+
 ### Added - 2026-02-03
 
 #### Security Enhancements
