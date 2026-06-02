@@ -4,13 +4,22 @@ const path = require('path');
 
 // Configuration
 const MAX_WIDTH = 1200; // Max width in pixels (plenty for retina displays)
-const QUALITY = 80; // JPEG quality (80 is sweet spot - visually identical but much smaller)
-const MIN_SIZE_KB = 500; // Only optimize images larger than 500KB
+const QUALITY = 80; // Quality (80 is sweet spot - visually identical but much smaller)
+const MIN_SIZE_KB = 200; // Only optimize images larger than 200KB
 
 // Directories to scan
 const IMAGE_DIRS = [
   'public/images/atmosphere',
   'public/images/gallery',
+  'public/images/menu/burgers',
+  'public/images/menu/appetizers',
+  'public/images/menu/sandwiches',
+  'public/images/menu/salads',
+  'public/images/menu/milkshakes',
+  'public/images/menu/beer-ciders',
+  'public/images/menu/coffees',
+  'public/images/menu/beverages',
+  'public/images/menu/specialty',
 ];
 
 async function getFileSize(filePath) {
@@ -19,38 +28,39 @@ async function getFileSize(filePath) {
 }
 
 function formatBytes(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
   return (bytes / 1024 / 1024).toFixed(2) + ' MB';
 }
 
 async function optimizeImage(filePath) {
   const originalSize = await getFileSize(filePath);
-  const originalSizeMB = originalSize / 1024 / 1024;
 
   // Skip if smaller than threshold
-  if (originalSizeMB < (MIN_SIZE_KB / 1024)) {
+  if (originalSize < MIN_SIZE_KB * 1024) {
     return null;
   }
 
-  console.log(`\n📸 Optimizing: ${path.basename(filePath)}`);
+  const ext = path.extname(filePath).toLowerCase();
+  const baseName = path.basename(filePath, path.extname(filePath));
+  const dirName = path.dirname(filePath);
+
+  console.log(`\n  Optimizing: ${path.basename(filePath)}`);
   console.log(`   Original size: ${formatBytes(originalSize)}`);
 
   try {
-    // Create optimized version with .optimized suffix
-    const ext = path.extname(filePath);
-    const baseName = path.basename(filePath, ext);
-    const dirName = path.dirname(filePath);
-    const optimizedPath = path.join(dirName, `${baseName}.optimized${ext}`);
+    // Always output as WebP for best compression
+    const optimizedPath = path.join(dirName, `${baseName}.optimized.webp`);
 
-    // Optimize image
-    await sharp(filePath)
-      .resize(MAX_WIDTH, null, {
-        withoutEnlargement: true, // Don't enlarge smaller images
-        fit: 'inside',
-      })
-      .jpeg({
+    const pipeline = sharp(filePath).resize(MAX_WIDTH, null, {
+      withoutEnlargement: true,
+      fit: 'inside',
+    });
+
+    await pipeline
+      .webp({
         quality: QUALITY,
-        progressive: true, // Progressive JPEGs load faster
-        mozjpeg: true, // Use mozjpeg for better compression
+        effort: 6, // Higher effort = better compression
       })
       .toFile(optimizedPath);
 
@@ -58,27 +68,34 @@ async function optimizeImage(filePath) {
     const savedBytes = originalSize - newSize;
     const percentSaved = ((savedBytes / originalSize) * 100).toFixed(1);
 
-    console.log(`   ✅ New size: ${formatBytes(newSize)}`);
-    console.log(`   💾 Saved: ${formatBytes(savedBytes)} (${percentSaved}% reduction)`);
-    console.log(`   📁 Created: ${path.basename(optimizedPath)}`);
+    console.log(`   New size: ${formatBytes(newSize)}`);
+    console.log(`   Saved: ${formatBytes(savedBytes)} (${percentSaved}% reduction)`);
 
     return {
       file: path.basename(filePath),
-      optimizedFile: path.basename(optimizedPath),
+      originalExt: ext,
+      optimizedFile: `${baseName}.optimized.webp`,
       originalPath: filePath,
       optimizedPath,
+      finalPath: path.join(dirName, `${baseName}.webp`),
       originalSize,
       newSize,
       savedBytes,
       percentSaved: parseFloat(percentSaved),
+      formatChanged: ext !== '.webp',
     };
   } catch (error) {
-    console.error(`   ❌ Error optimizing ${filePath}:`, error.message);
+    console.error(`   Error optimizing ${filePath}:`, error.message);
     return null;
   }
 }
 
 async function scanDirectory(dirPath) {
+  if (!fs.existsSync(dirPath)) {
+    console.log(`\n  Directory not found: ${dirPath}`);
+    return [];
+  }
+
   const files = await fs.promises.readdir(dirPath);
   const results = [];
 
@@ -89,7 +106,7 @@ async function scanDirectory(dirPath) {
     const filePath = path.join(dirPath, file);
     const stat = await fs.promises.stat(filePath);
 
-    if (stat.isFile() && /\.(jpg|jpeg|png)$/i.test(file)) {
+    if (stat.isFile() && /\.(jpg|jpeg|png|webp)$/i.test(file)) {
       const result = await optimizeImage(filePath);
       if (result) {
         results.push(result);
@@ -101,72 +118,93 @@ async function scanDirectory(dirPath) {
 }
 
 async function main() {
-  console.log('🚀 Starting image optimization...\n');
+  console.log('Starting image optimization...\n');
   console.log(`Configuration:`);
   console.log(`  - Max width: ${MAX_WIDTH}px`);
   console.log(`  - Quality: ${QUALITY}%`);
+  console.log(`  - Output format: WebP`);
   console.log(`  - Min size to optimize: ${MIN_SIZE_KB}KB`);
-  console.log(`\nScanning directories...`);
 
   let allResults = [];
 
   for (const dir of IMAGE_DIRS) {
-    if (!fs.existsSync(dir)) {
-      console.log(`\n⚠️  Directory not found: ${dir}`);
-      continue;
-    }
-
-    console.log(`\n📁 Scanning: ${dir}`);
+    console.log(`\n Scanning: ${dir}`);
     const results = await scanDirectory(dir);
     allResults = allResults.concat(results);
   }
 
   // Print summary
   console.log('\n' + '='.repeat(60));
-  console.log('📊 OPTIMIZATION SUMMARY');
+  console.log('OPTIMIZATION SUMMARY');
   console.log('='.repeat(60));
 
   if (allResults.length === 0) {
-    console.log('\n✨ No images needed optimization (all under 500KB)');
+    console.log('\nNo images needed optimization (all under threshold)');
   } else {
     const totalOriginal = allResults.reduce((sum, r) => sum + r.originalSize, 0);
     const totalNew = allResults.reduce((sum, r) => sum + r.newSize, 0);
     const totalSaved = totalOriginal - totalNew;
     const avgPercent = (allResults.reduce((sum, r) => sum + r.percentSaved, 0) / allResults.length).toFixed(1);
 
-    console.log(`\n✅ Optimized ${allResults.length} images`);
+    console.log(`\nOptimized ${allResults.length} images`);
     console.log(`   Total original size: ${formatBytes(totalOriginal)}`);
     console.log(`   Total new size: ${formatBytes(totalNew)}`);
     console.log(`   Total saved: ${formatBytes(totalSaved)}`);
     console.log(`   Average reduction: ${avgPercent}%`);
 
-    console.log('\n📋 Individual results:');
+    console.log('\nIndividual results:');
     allResults.forEach((r, i) => {
-      console.log(`   ${i + 1}. ${r.file}`);
-      console.log(`      ${formatBytes(r.originalSize)} → ${formatBytes(r.newSize)} (${r.percentSaved}% saved)`);
+      const formatNote = r.formatChanged ? ` (${r.originalExt} -> .webp)` : '';
+      console.log(`   ${i + 1}. ${r.file}${formatNote}`);
+      console.log(`      ${formatBytes(r.originalSize)} -> ${formatBytes(r.newSize)} (${r.percentSaved}% saved)`);
     });
 
     // Create batch script to replace files
-    console.log('\n\n📝 Creating replacement script...');
+    const batchLines = [];
+    const jsonUpdates = [];
 
-    const batchCommands = allResults.map(r => {
-      const originalPath = r.originalPath.replace(/\//g, '\\');
-      const optimizedPath = r.optimizedPath.replace(/\//g, '\\');
-      return `move /Y "${optimizedPath}" "${originalPath}"`;
-    }).join('\n');
+    for (const r of allResults) {
+      const optimizedWin = r.optimizedPath.replace(/\//g, '\\');
+      const finalWin = r.finalPath.replace(/\//g, '\\');
+      const originalWin = r.originalPath.replace(/\//g, '\\');
+
+      if (r.formatChanged) {
+        // New format: move optimized to .webp name, delete old file
+        batchLines.push(`move /Y "${optimizedWin}" "${finalWin}"`);
+        batchLines.push(`del "${originalWin}"`);
+        // Track JSON path updates needed
+        const oldRef = r.originalPath.replace(/^public/, '').replace(/\\/g, '/');
+        const newRef = r.finalPath.replace(/^public/, '').replace(/\\/g, '/');
+        jsonUpdates.push({ old: oldRef, new: newRef });
+      } else {
+        // Same format (already webp): just replace in place
+        batchLines.push(`move /Y "${optimizedWin}" "${originalWin}"`);
+      }
+    }
 
     const scriptPath = 'replace-optimized-images.bat';
-    fs.writeFileSync(scriptPath, batchCommands);
+    fs.writeFileSync(scriptPath, batchLines.join('\n'));
+    console.log(`\nCreated: ${scriptPath}`);
 
-    console.log(`✅ Created: ${scriptPath}`);
-    console.log(`\n💡 Next steps:`);
-    console.log(`   1. Review the .optimized.jpg files to verify quality`);
+    if (jsonUpdates.length > 0) {
+      console.log(`\nImage path updates needed in menuData.json:`);
+      jsonUpdates.forEach(u => {
+        console.log(`   ${u.old} -> ${u.new}`);
+      });
+
+      // Write JSON updates file for reference
+      fs.writeFileSync('image-path-updates.json', JSON.stringify(jsonUpdates, null, 2));
+      console.log(`\nCreated: image-path-updates.json`);
+    }
+
+    console.log(`\nNext steps:`);
+    console.log(`   1. Review .optimized.webp files to verify quality`);
     console.log(`   2. Stop your dev server if running`);
     console.log(`   3. Run: replace-optimized-images.bat`);
-    console.log(`   4. This will replace originals with optimized versions`);
+    console.log(`   4. Update image references in menuData.json if format changed`);
   }
 
-  console.log('\n✨ Optimization complete!\n');
+  console.log('\nOptimization complete!\n');
 }
 
 main().catch(console.error);

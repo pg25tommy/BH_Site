@@ -27,7 +27,7 @@
           "name": "3. BBQ, Cheddar, Bacon & Mushroom Burger",
           "description": "Democratically elected for its classic simplicity",
           "price": 24.49,
-          "image": "/images/menu/burgers/BBQ_Cheadar_Mushroom_Burger.jpg"
+          "image": "/images/menu/burgers/BBQ_Cheadar_Mushroom_Burger.webp"
         },
         {
           "id": "teriyaki-mozz-bacon",
@@ -41,14 +41,14 @@
           "name": "5. Swiss, Mozzarella & Pickle Burger",
           "description": "A cheese lover's dream, with a zing",
           "price": 23.19,
-          "image": "/images/menu/burgers/Swiss_mozza_pickle_Burger.jpg"
+          "image": "/images/menu/burgers/Swiss_mozza_pickle_Burger.webp"
         },
         {
           "id": "thai-beef",
           "name": "6. Thai Beef Burger",
           "description": "Crunchy peanut butter, bacon, green onion and sweet thai chilli sauce",
           "price": 22.89,
-          "image": "/images/menu/burgers/Thai_Beef_Burger.jpg"
+          "image": "/images/menu/burgers/Thai_Beef_Burger.webp"
         },
         {
           "id": "breaded-chicken",
@@ -70,7 +70,7 @@
           "name": "9. Mexican Meatless Garden Burger",
           "description": "With Salsa, Guacamole & Jalapenos",
           "price": 24.59,
-          "image": "/images/menu/burgers/Mexican_Meatlless.jpg"
+          "image": "/images/menu/burgers/Mexican_Meatlless.webp"
         },
         {
           "id": "breakfast-burger",
@@ -91,7 +91,7 @@
           "name": "Chicken Fingers",
           "description": "1/2 pound of wedges or salad - Breaded chicken tenders, fried to golden perfection (your choice of dip).",
           "price": 18.09,
-          "image": "/images/menu/appetizers/Chicken_Tenders.jpg"
+          "image": "/images/menu/appetizers/Chicken_Tenders.webp"
         },
         {
           "id": "chicken-wings",
@@ -126,7 +126,7 @@
           "name": "Loaded Potato Wedges",
           "description": "1/2 pound of wedges smothered with cheese & topped with real bacon bits and sour cream n' chives.",
           "price": 14.49,
-          "image": "/images/menu/appetizers/Cheese_And_Bits.jpg"
+          "image": "/images/menu/appetizers/Cheese_And_Bits.webp"
         },
         {
           "id": "magic-mushrooms",
@@ -140,7 +140,7 @@
           "name": "Yam Wedges",
           "description": "1/2 pound of crisp french fried wedges.",
           "price": 7.89,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         }
       ]
     },
@@ -161,7 +161,7 @@
           "name": "Toasted Heavenly Club",
           "description": "Cheddar, ham, bacon, tomato, lettuce our special sauce. It's a bite of heaven!!",
           "price": 21.09,
-          "image": "/images/menu/sandwiches/Heavenly_Club.jpg"
+          "image": "/images/menu/sandwiches/Heavenly_Club.webp"
         },
         {
           "id": "chicken-club",
@@ -175,7 +175,7 @@
           "name": "Our Great Grilled Cheddar Cheese",
           "description": "On thick sliced sourdough bread with natural aged Canadian cheddar – so nippy it bites back! Add bacon or ham $1.47 · Add tomato $0.99",
           "price": 11.29,
-          "image": "/images/menu/sandwiches/Grilled_Cheese.jpg"
+          "image": "/images/menu/sandwiches/Grilled_Cheese.webp"
         },
         {
           "id": "beef-dip",
@@ -224,7 +224,7 @@
           "name": "Heaven Sent Cod Burger",
           "description": "With lettuce, tomato, red onions and our house made tartar sauce, beer battered, grilled or cajun. Choose your bun: Sesame or Multigrain · Gluten free .80. Add your choice of sauce: Teriyaki, BBQ, Cajun, Habanero Mango, Crunchy Peanut Butter (n/c)",
           "price": 20.89,
-          "image": "/images/menu/burgers/Battered_Cod_Burger.jpg"
+          "image": "/images/menu/burgers/Battered_Cod_Burger.webp"
         }
       ]
     },
@@ -262,7 +262,7 @@
           "name": "Greek God Burger",
           "description": "A fresh grade \"A\" lean beef patty topped with green peppers, black olives & feta cheese & tzatziki. Food for the God's indeed!",
           "price": 24.89,
-          "image": "/images/menu/burgers/Greek_God_Burger.jpg"
+          "image": "/images/menu/burgers/Greek_God_Burger.webp"
         },
         {
           "id": "insanity",
@@ -283,7 +283,7 @@
           "name": "Hawaiian Burger",
           "description": "A teriyaki burger topped with ham, pineapple ring, lettuce, tomato, onions and mozzarella. Beats poi any day!",
           "price": 25.89,
-          "image": "/images/menu/burgers/Hawaiiawn_Burger.jpg"
+          "image": "/images/menu/burgers/Hawaiiawn_Burger.webp"
         },
         {
           "id": "chicken-cordon-bleu",
@@ -325,28 +325,28 @@
           "name": "Grilled Cheese Sandwich",
           "description": "Served with a small pop, milk, juice or coffee, potato wedges or salad and a small sundae.",
           "price": 15.49,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "kids-cheese-burger",
           "name": "Child's Cheese Burger",
           "description": "Served with a small pop, milk, juice or coffee, potato wedges or salad and a small sundae.",
           "price": 15.49,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "kids-chicken-fingers",
           "name": "Chicken Fingers",
           "description": "Served with a small pop, milk, juice or coffee, potato wedges or salad and a small sundae.",
           "price": 15.49,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "kids-fish-chips",
           "name": "Fish 'n' Chips",
           "description": "Served with a small pop, milk, juice or coffee, potato wedges or salad and a small sundae.",
           "price": 15.49,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         }
       ]
     },
@@ -360,21 +360,21 @@
           "name": "Caesar by Caesar (Appy Size)",
           "description": "Served with garlic toast and a lemon wedge. Add Chicken: $5.59 · Add Cod: $5.89",
           "price": 9.59,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "caesar-dinner",
           "name": "Caesar by Caesar (Dinner Size)",
           "description": "Served with garlic toast and a lemon wedge. Add Chicken: $5.59 · Add Cod: $5.89",
           "price": 13.49,
-          "image": "/images/menu/salads/Chicken_Ceaser_Salad.jpg"
+          "image": "/images/menu/salads/Chicken_Ceaser_Salad.webp"
         },
         {
           "id": "artisan-appy",
           "name": "Artisan Salad (Appy Size)",
           "description": "Our artisan salad with tomatoes, red onions, cabbage, carrots and feta. Served with garlic toast. Add Chicken: $5.59 · Add Cod: $5.89",
           "price": 9.59,
-          "image": "/images/menu/salads/Appy_Artisan_Salad.jpg"
+          "image": "/images/menu/salads/Appy_Artisan_Salad.webp"
         },
         {
           "id": "artisan-dinner",
@@ -395,7 +395,7 @@
           "name": "Soup (Cup)",
           "description": "Ask your server for today's selection",
           "price": 4.89,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "soup-bowl",
@@ -437,42 +437,42 @@
           "name": "Mint Chocolate",
           "description": "Refreshing mint chocolate milkshake",
           "price": 5.74,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "nutella-shake",
           "name": "Nutella",
           "description": "Creamy Nutella milkshake",
           "price": 5.74,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "peppermint-shake",
           "name": "Peppermint",
           "description": "Cool peppermint milkshake",
           "price": 5.74,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "peanut-butter-shake",
           "name": "Peanut Butter",
           "description": "Rich peanut butter milkshake",
           "price": 5.74,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "red-velvet-shake",
           "name": "Red Velvet",
           "description": "Decadent red velvet milkshake",
           "price": 5.74,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "apple-pie-shake",
           "name": "Apple Pie",
           "description": "Apple pie flavored milkshake",
           "price": 5.74,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         }
       ]
     },
@@ -521,35 +521,35 @@
           "name": "\"Bottomless\" Heavenly Coffee",
           "description": "Unlimited refills with a meal. Leaded and Unleaded.",
           "price": 3.24,
-          "image": "/images/menu/coffees/Coffee.jpg"
+          "image": "/images/menu/coffees/Coffee.webp"
         },
         {
           "id": "juice",
           "name": "Juice",
           "description": "Apple, Cranberry and Orange",
           "price": 3.79,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "ice-cream-float",
           "name": "Old Fashioned Ice Cream Float",
           "description": "Soft drink choices",
           "price": 5.74,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "soft-drinks",
           "name": "\"Bottomless\" Soft Drinks",
           "description": "Pepsi, 7-up, Rootbeer, Grape Crush, Ginger Ale, Diet Pepsi, Cream Soda, Ice Tea, Lemonade",
           "price": 3.69,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "tea",
           "name": "Tea",
           "description": "Hot tea",
           "price": 3.24,
-          "image": "/images/menu/coffees/Tea.jpg"
+          "image": "/images/menu/coffees/Tea.webp"
         },
         {
           "id": "hot-chocolate",
@@ -563,7 +563,7 @@
           "name": "Milk",
           "description": "Large (16oz. glass)",
           "price": 3.79,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         }
       ]
     },
@@ -598,35 +598,35 @@
           "name": "Domestic Bottles (341 ml.)",
           "description": "Sleemans Honey Brown, Budweiser, Canadian, Coors Light, Kokanee, MGD",
           "price": 6.39,
-          "image": "/images/menu/beer-ciders/Domestic_beer.jpg"
+          "image": "/images/menu/beer-ciders/Domestic_beer.webp"
         },
         {
           "id": "import-bottles",
           "name": "Import Bottles (330 ml.)",
           "description": "Heineken, Corona, Stella, Guiness",
           "price": 6.99,
-          "image": "/images/menu/beer-ciders/Import_Beer_Selection.jpg"
+          "image": "/images/menu/beer-ciders/Import_Beer_Selection.webp"
         },
         {
           "id": "ciders",
           "name": "Ciders (330 ml.)",
           "description": "Apple, Peach, Pear or Smirnoff Ice",
           "price": 6.99,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "motts-caesar",
           "name": "Mott's Caesar (355 ml.)",
           "description": "Classic Caesar",
           "price": 7.19,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "strongbow",
           "name": "Strongbow (440 ml.)",
           "description": "Strongbow cider",
           "price": 7.29,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         }
       ]
     },
@@ -640,21 +640,21 @@
           "name": "Glass (6 oz.)",
           "description": "Red or White wine by the glass",
           "price": 6.94,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "wine-half-litre",
           "name": "1/2 Litre",
           "description": "Red or White wine half litre",
           "price": 20.29,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         },
         {
           "id": "wine-litre",
           "name": "Litre",
           "description": "Red or White wine litre",
           "price": 26.54,
-          "image": "/images/menu/burgers/Coming_Soon.png"
+          "image": "/images/menu/burgers/Coming_Soon.webp"
         }
       ]
     },
@@ -717,28 +717,28 @@
           "name": "Baileys Milkshake",
           "description": "Baileys milkshake - enjoy as a vanilla shake or create your own favourite",
           "price": 8.74,
-          "image": "/images/menu/milkshakes/Boozy_Shake_Baileys.jpg"
+          "image": "/images/menu/milkshakes/Boozy_Shake_Baileys.webp"
         },
         {
           "id": "kahlua-shake",
           "name": "Kahlua Milkshake",
           "description": "Kahlua milkshake - enjoy as a vanilla shake or create your own favourite",
           "price": 8.74,
-          "image": "/images/menu/milkshakes/Boozy_Shake_Kulua.jpg"
+          "image": "/images/menu/milkshakes/Boozy_Shake_Kulua.webp"
         },
         {
           "id": "frangelico-shake",
           "name": "Frangelico Milkshake",
           "description": "Frangelico milkshake - enjoy as a vanilla shake or create your own favourite",
           "price": 8.74,
-          "image": "/images/menu/milkshakes/Boozy_Shake_Frangelico.jpg"
+          "image": "/images/menu/milkshakes/Boozy_Shake_Frangelico.webp"
         },
         {
           "id": "grand-marnier-shake",
           "name": "Grand Marnier Milkshake",
           "description": "Grand Marnier milkshake - enjoy as a vanilla shake or create your own favourite",
           "price": 8.74,
-          "image": "/images/menu/milkshakes/Boozy_Shake_grandmarinea.jpg"
+          "image": "/images/menu/milkshakes/Boozy_Shake_grandmarinea.webp"
         }
       ]
     }

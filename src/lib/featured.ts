@@ -18,7 +18,7 @@ const FALLBACK_FEATURED: WeeklyFeatured = {
     description:
       'Cheddar, ham, bacon, tomato, lettuce our special sauce. It\'s a bite of heaven!!',
     price: 21.09,
-    image: '/images/menu/sandwiches/Heavenly_Club.jpg',
+    image: '/images/menu/sandwiches/Heavenly_Club.webp',
   },
   weekOf: new Date().toISOString().split('T')[0],
 };
@@ -26,7 +26,7 @@ const FALLBACK_FEATURED: WeeklyFeatured = {
 export async function getWeeklyFeatured(): Promise<WeeklyFeatured> {
   try {
     const response = await fetch(FEATURED_API_URL, {
-      cache: 'no-store',
+      next: { revalidate: 3600 },
       headers: {
         'Content-Type': 'application/json',
       },

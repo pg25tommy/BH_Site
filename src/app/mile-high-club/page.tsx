@@ -9,14 +9,14 @@ export const metadata: Metadata = {
 };
 
 const winners = [
-  { id: 1, image: '/images/atmosphere/Ernies_1st.jpg', place: '1st' },
-  { id: 2, image: '/images/atmosphere/Ernies_2nd.jpg', place: '2nd' },
-  { id: 3, image: '/images/atmosphere/Ernies_3rd.jpg', place: '3rd' },
-  { id: 4, image: '/images/atmosphere/Ernies_4th.jpg', place: '4th' },
-  { id: 5, image: '/images/atmosphere/Ernies_5th.jpg', place: '5th' },
-  { id: 6, image: '/images/atmosphere/Ernies_6th.jpg', place: '6th' },
-  { id: 7, image: '/images/atmosphere/Ernies_7th.jpg', place: '7th' },
-  { id: 8, image: '/images/atmosphere/Ernies_8th.jpg', place: '8th' },
+  { id: 1, image: '/images/atmosphere/Ernies_1st.webp', place: '1st' },
+  { id: 2, image: '/images/atmosphere/Ernies_2nd.webp', place: '2nd' },
+  { id: 3, image: '/images/atmosphere/Ernies_3rd.webp', place: '3rd' },
+  { id: 4, image: '/images/atmosphere/Ernies_4th.webp', place: '4th' },
+  { id: 5, image: '/images/atmosphere/Ernies_5th.webp', place: '5th' },
+  { id: 6, image: '/images/atmosphere/Ernies_6th.webp', place: '6th' },
+  { id: 7, image: '/images/atmosphere/Ernies_7th.webp', place: '7th' },
+  { id: 8, image: '/images/atmosphere/Ernies_8th.webp', place: '8th' },
 ];
 
 export default function MileHighClubPage() {
