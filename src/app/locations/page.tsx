@@ -175,15 +175,6 @@ export default function LocationsPage() {
                   your door. Delivery fees and minimums apply.
                 </p>
               </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-2 text-accent-900">
-                  Catering
-                </h3>
-                <p className="leading-relaxed">
-                  Planning an event? Contact us for catering options. We can
-                  accommodate groups of all sizes with advance notice.
-                </p>
-              </div>
             </div>
           </div>
         </div>

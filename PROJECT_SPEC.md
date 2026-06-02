@@ -101,7 +101,7 @@ A modern, responsive website for Burger Heaven - a Canadian burger restaurant in
 - Skip the Dishes ordering link
 - Get Directions button
 - Reservation call-ahead section (centered text)
-- Ordering information (Dine-in, Takeout, Delivery, Catering)
+- Ordering information (Dine-in, Takeout, Delivery)
 
 #### 6. About Page (`/about`)
 - Restaurant history (since 1985)
@@ -458,8 +458,7 @@ src/
 3. **Nutritional Information**: Calories, allergens per item
 4. **User Reviews**: Customer testimonials submission form
 5. **Table Reservation System**: Online booking for dine-in
-6. **Catering Menu**: Dedicated large order section
-7. **Mobile App**: Native iOS/Android apps
+6. **Mobile App**: Native iOS/Android apps
 8. **Social Media Feed**: Live Instagram integration
 9. **Gift Cards**: Purchase and redeem online
 10. **Multiple Locations**: Expansion support ready in data structure
@@ -509,7 +508,6 @@ src/
 1. **Dine-In**: Walk-ins welcome, call ahead for groups 6+
 2. **Takeout**: Call ahead, payment in-person or over phone
 3. **Delivery**: Skip the Dishes (fees and minimums apply)
-4. **Catering**: Contact for large orders with advance notice
 
 ---
 

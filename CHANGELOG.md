@@ -81,7 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Contact Form Subject Lines** (`src/app/api/contact/route.ts`)
   - Changed format to: `[Subject Category] - [Name]`
   - Enables quick urgency identification in inbox
-  - Examples: "Catering Inquiry - John Smith", "Complaint - Jane Doe"
+  - Examples: "Complaint - Jane Doe", "Compliment - John Smith"
 
 - **Application Email Subject Lines** (`src/app/api/apply/route.ts`)
   - Changed format to: `[Position] - [First Name Last Name]`

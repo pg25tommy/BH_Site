@@ -233,7 +233,6 @@ export default function ContactPage() {
                   >
                     <option value="">Select a topic</option>
                     <option value="feedback">General Feedback</option>
-                    <option value="catering">Catering Inquiry</option>
                     <option value="complaint">Complaint</option>
                     <option value="compliment">Compliment</option>
                     <option value="suggestion">Suggestion</option>
@@ -275,12 +274,6 @@ export default function ContactPage() {
                 <p className="text-accent-800 leading-relaxed">
                   We accept reservations for groups of 6 or more. For smaller parties,
                   we operate on a first-come, first-served basis.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-bold text-lg mb-2 text-accent-900">Do you offer catering?</h3>
-                <p className="text-accent-800 leading-relaxed">
-                  Yes! We can cater events of all sizes. Contact us for a custom quote.
                 </p>
               </div>
               <div>
