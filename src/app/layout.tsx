@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     icon: '/favicon.png',
     apple: '/favicon.png',
   },
+  verification: {
+    google: 'bdy9xfo6OYB_nAggrmdxaIgxukEmJxzC8Kze5J8oEBU',
+  },
   openGraph: {
     title: "Burger Heaven | Best Local Burgers in New Westminster, BC",
     description: "Locally owned Canadian restaurant serving premium burgers in New Westminster since 1985. Support local, taste authentic Canadian food.",
