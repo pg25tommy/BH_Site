@@ -100,8 +100,8 @@ export default function BurgerInsidersPage() {
                 <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <CheckCircleIcon className="w-8 h-8 text-primary-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-accent-900">Birthday Treats</h3>
-                <p className="text-accent-700">Special birthday surprises just for our insiders</p>
+                <h3 className="font-bold text-lg mb-2 text-accent-900">Special Events</h3>
+                <p className="text-accent-700">Special Burger Heaven and community events. Be first in line for the Burger Polls!</p>
               </div>
             </div>
           </div>
